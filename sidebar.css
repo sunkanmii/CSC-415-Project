@@ -1,0 +1,95 @@
+header{
+    display: flex;
+    width: 15rem;
+    position: relative;
+    flex-wrap: wrap;
+}
+header span{
+    display: block;
+    position: absolute;
+}
+.side-bar-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+    top: 0;
+    left: -100%;
+    transition: 0.5s;
+    background: linear-gradient(175.67deg, #440A67 0%, #93329E 98%);
+}
+.side-bar-section .profile-image{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1.5rem 0rem;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 4rem;
+    position: relative;
+}
+.side-bar-section .profile-image img{
+    width: 95px;
+    height: 95px;
+}
+.side-bar-section .profile-image hr{
+    width: 10rem;
+    height: 1px;
+    margin-top: 0.5rem;
+    position: absolute;
+    bottom: 0;
+    left: 2.6rem;
+    border: 1px solid rgba(255, 255, 255, 0.56);
+    background-color: rgba(255, 255, 255, 0.56);
+}
+.side-bar-section .links-to-pages .page-link{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+.side-bar-section .links-to-pages .page-link:nth-child(1){
+    margin-top: 0;
+}
+.side-bar-section .links-to-pages .page-link:nth-child(6){
+    margin-top: 11rem;
+    margin-bottom: 3rem;
+}
+.side-bar-section .links-to-pages .page-link p{
+    margin-left: 1rem;
+}
+.side-bar-section .links-to-pages .page-link a{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0.5rem;
+}
+.toggle-menu{
+    font-size: 24px;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    padding: 1rem;
+}
+/* Toggle menu */
+header #toggle-butt {
+    display: none;
+}
+header #toggle-butt:checked~.side-bar-section {
+    left: 0;
+}
+
+@media screen and (min-width: 40rem) {
+    header .toggle-menu{
+        display: none;
+    }
+    header .side-bar-section{
+        left: 0;
+        width: 15rem;
+        position: relative;
+    }
+}
