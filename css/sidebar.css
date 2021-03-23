@@ -1,10 +1,11 @@
-header{
+.header-sidebar{
     display: flex;
     width: 15rem;
     position: relative;
     flex-wrap: wrap;
+    z-index: 2;
 }
-header span{
+.header-sidebar span{
     display: block;
     position: absolute;
 }
@@ -76,20 +77,21 @@ header span{
     padding: 1rem;
 }
 /* Toggle menu */
-header #toggle-butt {
+.header-sidebar #toggle-butt {
     display: none;
 }
-header #toggle-butt:checked~.side-bar-section {
+.header-sidebar #toggle-butt:checked~.side-bar-section {
     left: 0;
 }
 
-@media screen and (min-width: 40rem) {
-    header .toggle-menu{
+@media screen and (min-width: 60rem) {
+    .header-sidebar .toggle-menu{
         display: none;
     }
-    header .side-bar-section{
+    .header-sidebar .side-bar-section{
         left: 0;
         width: 15rem;
         position: relative;
     }
+    
 }

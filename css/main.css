@@ -9,7 +9,7 @@
 
 html,
 body {
-    color: #098dff;
+    color: black;
     font-size: 1rem;
     line-height: 1.5;
     letter-spacing: 0.12rem;
@@ -31,6 +31,111 @@ a{
     color: white;
 }
 
+main .main-page{
+    display: flex;
+    width: 100%;
+    min-height: 19rem;
+    position: absolute;
+    top: 2rem;
+    flex-wrap: wrap;
+    z-index: 1;
+    padding: 1rem;
+}
+
+.main-page .appointment-header{
+    display: flex;
+    min-height: 3rem;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.main-page .appointment-header h1{
+    font-size: 2rem;
+    width: 60%;
+}
+.main-page .appointment-header .create-new-row{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 9rem;
+}
+.main-page .appointment-header .create-new-row span img{
+    width: 26px;
+    height: 7.25px;
+}
+.main-page .appointment-header .create-new-row button{
+    background-color: #10CD45;
+    border-radius: 0.5rem;
+    box-shadow: 1px 3px 4px lightgrey;
+    border: none;
+    margin-left: 1.3rem;
+    color: white;
+    height: 34px;
+    width: 82px;
+    font-size: 0.8rem;
+}
+main{
+    display: flex;
+    width: 100%;
+}
+table, th, td {
+    border-bottom: 1px solid black;
+}
+tr:last-child td{
+    border-bottom: none;
+}
+table{
+    border-bottom: none;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+.table-section{
+    display: flex;
+    justify-content: center;
+    flex-wrap: inherit;
+    align-items: center;
+    width: 100%;
+    overflow-x: scroll;
+}
+.table-section table th, .table-section table td{
+    padding: 0.5rem;
+    padding-top: 1.8rem;
+}
+.table-section .next-prevBut-section{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.5rem;
+}
+.table-section .next-prevBut-section button{
+    border: 1px solid lightgrey;
+    border-radius: 50%;
+    width: 1.4rem;
+    height: 1.4rem;
+}
+.table-section .next-prevBut-section input[type=number]{
+    border: none;
+    width: 2rem;
+    text-align: center;
+}
+@media screen and (min-width: 60rem) {
+    main .main-page{
+        position: relative;
+        top: 0;
+        height: 40rem;
+    }   
+    main .main-page .appointment-header{
+        height: 8rem;
+    }
+    .table-section{
+        overflow: unset;
+    }
+}
 /* ::-webkit-scrollbar {
     width: 1.2rem;
 }
@@ -39,7 +144,7 @@ a{
     box-shadow: inset 0 0 7px lightgrey;
     border-radius: 2rem;
     transition: all 90ms ease-in;
-
+    
 }
 
 ::-webkit-scrollbar-thumb {
