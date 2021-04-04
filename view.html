@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel='stylesheet' type='text/css' media='screen' href='./css/main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/index.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='./css/sidebar.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='./css/view.css'>
 </head>
@@ -71,10 +71,11 @@
         </section>
 
         <section class="main-section">
-            <h1 id="user-name">Natasha Laurel Christina</h1>
-            <img src="./imgs/" alt=""/>
-            <hr/>
-
+            <section class="profile-header">
+                <h1 id="user-name">Natasha Laurel Christina</h1>
+                <img src="./imgs/profile.png" alt="your photo"/>
+                <hr/>
+            </section>
             <section class="main-section-body">
                 <p id="department-name">Department: <span id="student-department">Computer Sciences</span></p>
                 <p id="student-course">Course: <span id="course-code">Web Security 415</span></p>
@@ -91,10 +92,14 @@
                         massa. Nullam auctor tellus id quis arcu
                     </p>
                 </article>
-                <label for="reply-box">Reply: </label>
-                <input id="reply-box" type="text" min="4" required/>
-                <button>Send</button>
+                
+                <section class="reply-section">
+                    <label for="reply-box">Reply: </label>
+                    <input id="reply-box" type="text" min="4" max="500" placeholder="Enter a message..." required/>
+                    <button>Send</button>
+                </section>
             </section>
+
             <section class="cancel-complete-section">
                 <button>Cancel</button>
                 <button>Complete</button>

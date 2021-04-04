@@ -93,5 +93,7 @@
         width: 15rem;
         position: relative;
     }
-    
+    .side-bar-section .profile-image {
+        margin-bottom: 0;
+    }
 }
