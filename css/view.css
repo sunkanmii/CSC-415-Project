@@ -1,0 +1,128 @@
+main .main-section{
+    display: flex;
+    width: 100%;
+    position: absolute;
+    flex-wrap: wrap;
+}
+.main-section .cancel-complete-section{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 4rem;
+    color: #444444;
+}
+.main-section .cancel-complete-section button{
+    border-radius: 10px;
+    width: 103px;
+    height: 30px;
+    margin-left: 0.5rem;
+    border: none;
+    box-shadow: 1px 3px 4px lightgrey;
+}
+.main-section .cancel-complete-section button:nth-child(1){
+    background-color: #DB0E0E;
+}
+.main-section .cancel-complete-section button:nth-child(2){
+    background-color: #10CD45;
+}
+.main-section-body{
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 2rem 1.5rem;
+}
+.main-section .profile-header {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem 0rem;
+    width: 100%;
+    justify-content: space-around;
+}
+.main-section .profile-header h1{
+    font-size: 2rem;
+    width: 90%;
+    order: 2;
+    margin-top: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+.main-section .profile-header img{
+    width: 12.6875rem;
+    height: 12.6875rem;
+    order: 1;
+}
+.main-section .profile-header hr{
+    width: 80%;
+    border: none;
+    background-color: #D2D2D2;
+    border: 1px solid #D2D2D2;
+    order: 3;
+    margin-top: 1.5rem;
+}
+.main-section-body > p, .main-section article, .main-section .reply-section{
+    padding: 1rem 1rem;
+    font-weight: bold;
+    width: 100%;
+    color: #5F5C5C;
+    text-transform: uppercase;
+}
+.main-section #status-option{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 16rem;
+}
+.main-section p #status-output{
+    background-color: #FFE3FE;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 103px;
+    height: 30px;
+}
+.main-section-body p span, .main-section-body #message-section #message-output{
+    font-weight: 200;
+    text-transform: none;
+    color: #878787;
+}
+.main-section .reply-section input[type="text"]{
+    width: 100%;
+    margin: 0.5rem 0rem;
+    height: 5rem;
+    text-transform: none;
+    padding-left: 0.3rem;
+    border-radius: 10px;
+    border: 1px solid lightgrey;
+    box-shadow: 0px 4px 16px rgba(51, 51, 51, 0.08), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.main-section .reply-section button{
+    color: white;
+    background-color: #440A67;
+    padding: 0.5rem 1rem;
+    border-radius: 10%;
+    border: none;
+    float: right;
+    box-shadow: 1px 3px 4px lightgrey;
+}
+@media screen and (min-width: 60rem) {
+    main .main-section{
+        position: relative;
+        width: 80%;
+    }
+    .main-section .profile-header h1{
+        width: 70%;
+        order: 1;
+    }
+    .main-section .profile-header img{
+        order: 2;
+    }
+    main .profile-header{
+        justify-content: flex-start;
+        align-items: center;
+    }
+}

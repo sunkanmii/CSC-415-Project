@@ -1,0 +1,37 @@
+* {
+    font-family: 'Lato', Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1rem;
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    color: black;
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: 0.12rem;
+    word-spacing: 0.16rem;
+}
+
+body {
+    display: grid;
+    position: relative;
+    width: 100%;
+    height: -webkit-fill-available;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    justify-content: center;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+main{
+    display: flex;
+    width: 100%;
+}
