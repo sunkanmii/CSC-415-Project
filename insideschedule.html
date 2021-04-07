@@ -11,6 +11,7 @@
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel='stylesheet' type='text/css' media='screen' href='./css/main.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='./css/sidebar.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/inside_schedule.css'>
 </head>
 
 <body>
@@ -67,6 +68,109 @@
                     </div>
                 </div>
             </section>
+        </section>
+        <section class="main-page">
+            <div class="appointment-header">
+                <h1>Set Appointment Schedules</h1>
+               <div class="create-new-row">
+                <div class="container">
+                    <div class="round-container">
+                        <h3><bold>Active</bold></h3>
+                    </div>
+                    <h3>2020</h3>
+                    <h3>Session</h3>
+                </div>
+               </div>
+               <hr class="solid">
+            </div>
+        </br>
+           <!-- form body -->
+           <div class="form-body">
+               <div class="horizontal-group">
+                   <div class="form-group left">
+                       <label class="label-title">Start Date</label>
+                        <input type="date" class="form-input"required="required" />
+                    </div>
+                    <div class="form-group left">
+                        <label class="label-title">End Date</label>
+                        <input type="date" class="form-input"/>
+                    </div>
+                    <div class="form-group left">
+                        <label class="label-title">Max stu/day</label>
+                        <input type="number" class="form-input"/>
+                    </div>
+                </div>
+            </div>
+        </br>
+            <div class="form-body">
+                <div class="horizontal-group">
+                    <div class="form-group left">
+                        <label class="label-title">Dow</label>
+                         <div >
+                            <select class="form-input" name="cars" id="cars">
+                                <option value="monday">Monday</option>
+                                <option value="tuesday">tuesday</option>
+                                <option value="wednesday">Wednesday</option>
+                                <option value="thursday">Thursday</option>
+                                <option value="friday">Friday</option>
+                              </select>
+                         </div>
+                     </div>
+                     <div class="form-group left">
+                        <label class="label-title">Start Time</label>
+                        <input type="time" class="form-input" placeholder="9/23/20" required="required" />
+                    </div>
+                    <div class="form-group left">
+                        <label class="label-title">End Time</label>
+                        <input type="time" class="form-input" placeholder="4" />
+                    </div>
+                    <div><button>add</button></div>
+                 </div>
+             </div>
+             <!-- form end -->
+            <div class="table-section">
+                <table>
+                    <tr>
+                        <th>Session</th>
+                        <th>Start Date</th>
+                        <th>End Date</th>
+                        <th>Available DOW</th>
+                        <th>stu/day</th>
+                        <th>StartTime</th>
+                        <th>EndTime</th>
+                        <th>stu/day</th>
+                      </tr>
+                      <tr>
+                        <td>2020</td>
+                        <td>8/23/20</td>
+                        <td>9/23/20</td>
+                        <td>monday</td>
+                        <td>4</td>
+                        <td>5:30pm</td>
+                        <td>7:30pm</td>
+                        <td>delete</td>
+                      </tr>
+                      <tr>
+                        <td>2020</td>
+                        <td>7/20/20</td>
+                        <td>8/21/20</td>
+                        <td>friday</td>
+                        <td>3</td>
+                        <td>10:00am</td>
+                        <td>11:00am</td>
+                        <td>delete</td>
+                      </tr>
+                      <tr>
+                        <td>2020</td>
+                        <td>5/20/20</td>
+                        <td>6/21/20</td>
+                        <td>tuesday</td>
+                        <td>5</td>
+                        <td>10:00am</td>
+                        <td>11:00am</td>
+                        <td>delete</td>
+                      </tr>
+                </table>
         </section>
     </main>
     <script src='./js/main.js'></script>
