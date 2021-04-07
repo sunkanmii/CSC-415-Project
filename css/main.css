@@ -96,6 +96,21 @@ table{
     width: 2rem;
     text-align: center;
 }
+.p415-work-status-update-green, .p415-work-status-update-red, .p415-work-status-update-pink{
+    padding: 0.4rem 0.8rem;
+    border-radius: 10px;
+    color: #444444;
+    font-weight: bold;
+}
+.p415-work-status-update-green{
+    background-color: #10CD45;
+}
+.p415-work-status-update-red{
+    background-color: #DB0E0E;
+}
+.p415-work-status-update-pink{
+    background-color: #FFE3FE;;
+}   
 @media screen and (min-width: 60rem) {
     main .main-page{
         position: relative;
