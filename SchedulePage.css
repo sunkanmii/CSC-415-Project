@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+*{
+  margin: 0;
+  padding: 0; 
+  box-sizing: border-box;
+}
+body{
+  background: #E5E5E5;
+ }
+.wrapper .header{
+  position: absolute;
+  width: 177px;
+  height: 48px;
+  left: 320px;
+  top: 73px; 
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 48px;
+  color: #000000;
+  margin: 0px 105px;
+}
+
+.cards{
+
+  padding: 100px;
+  width:100%;
+  display: flex;
+  justify-content: space-between; 
+  flex-wrap: wrap;
+  margin: 150px 318px;
+  position: absolute;
+}
+.cards_item::before{
+  
+  background: #E5E5E5;
+  position:absolute;
+  display:block;
+  content:'';
+  border-radius: 50%;
+  width: 211px;
+  height: 180px;
+  opacity: 0.24;
+  margin:-80px 180px; 
+}
+.cards_item::before1{
+  width: 4rem;
+  height: 4rem;
+  background: #000000;
+  position:absolute;
+  display:block;
+  content:'';
+  
+  /*margin:-80px 180px; */
+}
+.cards .cards_item{
+  padding: 0px 0px;
+  width: 290px; 
+  height: 250px;
+}
+.cards .cards_inner{
+  background: #6E41E2;
+  width: 292px; 
+  height: 170px;
+  Type=Default
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  background: #6E41E2;
+  border-radius: 8px;
+  padding: 21px 20px; 
+}
+.cards .cards_inner ion-icon{
+  position: relative;
+  width: 15px;
+  height: 14px;
+  left: 2px;
+  top: -60px;
+  color: #FFFFFF;
+  margin: 0px 3px;
+
+  }
+.cards .cards_inner .status{
+  position: static;
+  height: 20px;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 20px;
+  margin-left: 7px;
+  display: flex;
+  align-items: flex-end;
+  text-align: center;
+  flex: none;
+  order: 0;
+  align-self: center;
+  flex-grow: 0;
+}
+.cards .cards_inner .year{
+  position: static;
+  height: 28px;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 28px;
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 4px 5px
+}
+.cards .cards_inner .session{
+  position: static;
+  height: 24px;
+  left: 0px;
+  right: 0px;
+  top: 32px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0px 5px;
+  color: #FFFFFF;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+.cards .cards_inner .school{
+  position: static;
+  width: 211px;
+  left: 0px;
+  top: 0%;
+  bottom: 0%;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFFFFF;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 40px 58px;
+}
