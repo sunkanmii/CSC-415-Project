@@ -1,12 +1,3 @@
-*{
-    font-family: 'Lato', Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-size: 1rem;
-    scroll-behavior: smooth;
-}
-
 .container{
 flex-wrap: wrap;
 background: #6E41E2;
@@ -15,6 +6,34 @@ border-radius: 8px;
 padding: 1rem 2rem;
 height: 112px;
 width: 222px;
+}
+
+.section-head{
+    width: 100%;
+    min-height: 19rem;
+    top: 0rem;
+    flex-wrap: wrap;
+    z-index: 1;
+    padding: 1rem 4rem;
+}
+
+.section-head .header{
+    display: flex;
+    min-height: 3rem;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 0rem;
+    align-items: center;
+}
+.section-head .header h1{
+    font-size: 2rem;
+    width: 60%;
+}
+.section-head .header .container-header{
+    display: flex;
+    width: 9rem;
+    margin-bottom: 1rem;
 }
 
 .round-container{
@@ -30,10 +49,11 @@ width: 222px;
 }
 h3{
     font-weight: bold;
+    color: #ffffff;
 }
 hr.solid {
     border-top: 3px solid #bbb;
-    width: 1100px;
+    width:100%;
   }
   .space{
       height: 100px;
@@ -96,4 +116,45 @@ input[type="number"]::-webkit-calendar-picker-indicator {
     width: 82px;
     cursor: pointer;
     font-size: 0.8rem;
+}
+
+table, th, td {
+    border-bottom: 1px solid #D2D2D2;
+}
+tr:last-child td{
+    border-bottom: none;
+}
+table{
+    border-bottom: none;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    color: #878787;
+}
+.table-section table th, .table-section table td{
+    padding: 0.5rem;
+    padding-top: 1.8rem;
+}
+.table-section .next-prevBut-section{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.5rem;
+}
+.table-section table tbody{
+    width: 100%;
+}
+.table-section .next-prevBut-section button{
+    color: #878787;
+    border: 1px solid lightgrey;
+    background: white;
+    border-radius: 50%;
+    width: 1.4rem;
+    height: 1.4rem;
+}
+.table-section .next-prevBut-section input[type=number]{
+    border: none;
+    width: 2rem;
+    text-align: center;
 }
