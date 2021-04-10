@@ -1,3 +1,6 @@
+<?php
+    $conn = include('connect.php');
+?>
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
