@@ -1,4 +1,7 @@
 const allStatuses = document.querySelectorAll(".p415-work-status-update-green");
+const getSlotValue = document.querySelector("#slots");
+const getSlotSuffix = document.querySelector("#slots-suffix");
+
 for (let i = 0; i < allStatuses.length; i++) {
     if (allStatuses[i].innerText === "Cancelled") {
         allStatuses[i].classList.remove("p415-work-status-update-green");
@@ -23,3 +26,14 @@ window.onclick = function (e) {
         }
     }
 }
+
+// Changle suffix for slot -> slots
+function changeSuffix(){
+    if(Number(getSlotValue.textContent) > 1){
+        getSlotSuffix.textContent = "Slots left";
+    }
+    else{
+        getSlotSuffix.textContent = "Slot left";
+    }
+}
+changeSuffix();
