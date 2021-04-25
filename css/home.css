@@ -222,4 +222,7 @@ footer p{
         position: relative;
         padding-left: 2rem;
     }
+    .dropdown, .dropdown-content{
+        width: 41%;
+    }
 }
