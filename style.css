@@ -1,0 +1,194 @@
+html, body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.mt-9,
+.my-9 {
+    margin-top: 9rem !important;
+}
+
+.mb-9,
+.my-9 {
+    margin-bottom: 9rem !important;
+}
+
+.auth-wrapper.registration {
+    background-repeat: no-repeat;
+    background-size: 56%;
+    background-position: bottom right;
+    /*background-attachment: fixed;*/
+}
+
+.auth-wrapper.login {
+    background-repeat: no-repeat;
+    background-size: 56%;
+    background-position: bottom left;
+    /*background-attachment: fixed;*/
+}
+
+.card {
+    box-shadow: 0px 4px 16px 0px rgb(51 51 51 / 8%);
+    border-radius: 8px !important;
+    border: none;
+}
+
+.card .card-content .card-header {
+    background: #fff;
+    border-bottom: 1px solid rgba(241,241,241,1);
+}  
+
+.card .card-content .card-header .card-header-wrapper {
+    padding: .75rem 1.25rem 0 1.25rem;
+}
+
+.card .card-content .card-header .card-title {
+    font-size: 35px;
+    font-weight: 700;
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.nav-tabs .nav-item {
+    padding: .5rem 1rem 0 1rem;
+}
+
+.nav-tabs .nav-item:first-child {
+    padding-left: 0;
+}
+
+.nav-tabs .nav-item .nav-link {
+    border: 0;
+    font-weight: 500;
+    color: grey;
+}  
+
+.nav-tabs .nav-item .nav-link.active-link {
+    color: #000;
+    border-bottom: 2px solid #6E41E2;
+}
+
+.input-field {
+    background: #fff;
+    padding: 10px 5px;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.04), 0px 4px 16px rgba(51, 51, 51, 0.08);
+}
+
+.input-field input.js-input {
+    border: 0;
+}
+
+.input-field input.js-input:focus {
+    border: 0;
+    outline: none;
+    box-shadow: none;
+}
+
+.input-field {
+    position: relative;
+}
+
+input.js-input:focus:not([readonly])+label {
+    color: #6E41E2;
+}
+
+input.js-input+label:after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    opacity: 0;
+    -webkit-transition: .2s opacity ease-out, .2s color ease-out;
+    transition: .2s opacity ease-out, .2s color ease-out;
+}
+
+.input-field>label {
+    color: #9e9e9e;
+    background: #fff;
+    position: absolute;
+    top: 5px;
+    left: 15px;
+    font-size: 14px;
+    cursor: text;
+    -webkit-transition: color .2s ease-out, -webkit-transform .2s ease-out;
+    transition: color .2s ease-out, -webkit-transform .2s ease-out;
+    transition: transform .2s ease-out, color .2s ease-out;
+    transition: transform .2s ease-out, color .2s ease-out, -webkit-transform .2s ease-out;
+    -webkit-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    text-align: initial;
+    -webkit-transform: translateY(12px);
+    transform: translateY(12px);
+}
+
+.input-field-label {
+    padding: 0 .5rem;
+}
+
+.input-field>label:not(.label-icon).active {
+    transform: translateY(-14px) scale(.8);
+    transform-origin: 0 0;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: .5rem;
+}
+
+.form-check-label {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 24px;
+}
+
+.btn-custom {
+    background: #6E41E2;
+    border: 1px solid #6E41E2;
+    color: #fff;
+}
+
+.btn-custom:hover {
+    background: #6035cc;
+    border: 1px solid #6035cc;
+}
+
+.privacy-policy, .auth-signin {
+    color: #6035cc !important;
+    text-decoration: none !important;
+}
+
+
+/* -------------------------------
+    MEDIA QUERIES
+----------------------------------*/
+@media only screen and (max-width: 768px) {
+    .mt-9,
+    .my-9 {
+        margin-top: 5rem !important;
+    }
+
+    .mb-9,
+    .my-9 {
+        margin-bottom: 5rem !important;
+    }
+}
+
+@media only screen and (min-width: 991px) {
+    .auth-wrapper.registration {
+        background-image: url(8401-1.svg);
+    }
+    
+    .auth-wrapper.login {
+        background-image: url(5972-1.svg);
+    }
+
+    .form-check-label {
+        font-size: 16px;
+    }
+
+    .btn-custom {
+        padding: 10px 162px;
+    }
+}
