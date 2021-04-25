@@ -1,0 +1,49 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+main{
+    flex-wrap: wrap;
+    position: relative;
+    min-height: 100vh;
+}
+a{
+    color: black;
+}
+.p415-login-container{
+    display: flex;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+}
+.p415-login-container .p415-login-card{
+    display: flex;
+    width: 474px;
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+}
+.p415-login-container .p415-login-card h1{
+    width: 100%;
+}
+.p415-login-card .p415-link-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.p415-login-card .p415-link-section a{
+    color: black;
+}
+.p415-login-card nav ul li a{
+    color: black;
+}
+main img{
+    width: 771px;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+}

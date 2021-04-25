@@ -1,72 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Authentication</title>
+    <title>Login</title>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
-    
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/index.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/siginin.css">
 </head>
+
 <body>
-    <div class="auth-wrapper login">
-        <div class="container">
-            <div class="row justify-content-center align-items-center">
-                <div class="col-12 col-md-6 col-xl-5 my-9">
-                    <div class="card">
-                        <div class="card-content">
-                            <div class="card-header p-0">
-                                <div class="card-header-wrapper">
-                                    <div class="card-title">Profile</div>
-                                    <ul class="nav nav-tabs border-0">
-                                        <li class="nav-item">
-                                            <a class="px-0 nav-link active-link" href="login.html">
-                                                Sign in
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="px-0 nav-link" href="registration.html">
-                                                Registration
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <form action="">
-                                <div class="input-field form-group">
-                                    <input id="email" type="text" class="js-input form-control">
-                                    <label for="email" class="input-field-label">E-mail</label>
-                                </div>
-                                <div class="input-field form-group">
-                                    <input id="password" type="password" class="js-input form-control">
-                                    <label for="password" class="input-field-label">Password</label>
-                                </div>
-                                <button type="submit" class="btn btn-custom btn-block mb-3">
-                                    Sign in
-                                </button>
-                            </form>
-                            <a href="registration.html" class="d-flex justify-content-center auth-signin">
-                                Registration
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <main>
+        <section class="p415-login-container">
+            <section class="p415-login-card">
+                <h1>Profile</h1>
+                <nav>
+                    <ul>
+                        <li><a href="./login.html">Sign in</a></li>
+                        <li><a href="./registration.html">Registration</a></li>
+                    </ul>
+                </nav>
+
+                <section class="p415-mail-section">
+                    <label for="user-email">Email</label>
+                    <input id="user-email" type="email" placeholder="Email" name="email" required
+                        autocomplete="email" />
+
+                    <label for="user-password">Password</label>
+                    <input id="user-email" type="password" placeholder="Password" name="password" required
+                        autocomplete="current-password" />
+
+                </section>
+
+                <section class="p415-link-section">
+                    <a href="#" class="p415-link active">Sign in</a>
+                    <a href="#"class="p415-link">Registration</a>
+                </section>
+            </section>
+        </section>
+        <img src="./imgs/5972-1.svg" alt="" />
+    </main>
     <script src="main.js"></script>
 </body>
+
 </html>
