@@ -11,8 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel='stylesheet' type='text/css' media='screen' href='./css/home.css'>
-    <link rel='stylesheet' type='text/css' media='screen' href='./css/index.css'>
+        <link rel='stylesheet' type='text/css' media='screen' href='./css/index.css'>
+        <link rel='stylesheet' type='text/css' media='screen' href='./css/home.css'>
 </head>
 
 <body>
@@ -49,15 +49,17 @@
                     <a href="#">Date 3</a>
                 </div>
             </div>
-            <p>
-                <span id="slots">2</span>
-                <span id="slots-suffix">Slot</span> left
-            </p>
+            <div class="p415-slot-section">
+                <p>
+                    <span id="slots">2</span>
+                    <span id="slots-suffix">Slot left</span>
+                </p>
+            </div>
 
             <time datetime="2021-03-22T17:30">Monday. 22nd March 2021 5:30pm</time>
 
             <label for="leave-a-message">Leave a message</label>
-            <input type="text" id="leave-a-message" placeholder="Leave a message..." name="booking-message" />
+            <textarea cols="5" rows="8" id="leave-a-message" placeholder="Leave a message..." name="booking-message" ></textarea>
 
             <input type="submit" value="BOOK" />
         </section>

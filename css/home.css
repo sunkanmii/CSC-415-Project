@@ -1,19 +1,108 @@
-h1, h2{
+*{
     font-family: 'Raleway', sans-serif;
 }
-.active{
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+main>* {
+    margin: 1rem 0;
+}
+
+.active {
     border-radius: 12px;
     border: 2px solid #2F80ED;
+}
+
+
+nav {
+    display: flex;
+    height: auto;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    text-decoration: none;
+    height: auto;
+}
+
+nav ul li {
+    text-decoration: none;
+    display: inline-block;
+}
+
+nav ul li a {
+    color: black;
+    padding: 1rem;
+}
+
+nav ul li img {
+    width: 90px;
+    height: 90px;
+}
+
+.p415-upperheader {
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.p415-upperheader h1 {
+    font-size: 2.5rem;
+}
+
+.p415-upperheader h2 {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+.p415-mid-section {
+    display: flex;
+    width: 100%;
+}
+
+.p415-mid-section p {
+    width: 100%;
+    position: absolute;
+    padding-left: 2rem;
+}
+
+.p415-mid-section img {
+    width: 100%;
+    margin-top: 3rem;
+    height: auto;
+}
+
+.p415-bottom-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
 .dropdown {
     float: left;
     overflow: hidden;
+    width: 80%;
 }
 
 .dropdown .dropbtn {
     cursor: pointer;
+    display: flex;
+    justify-content: space-between;
     font-size: 16px;
+    width: 100%;
     border: none;
     outline: none;
     color: rgba(17, 17, 17, 0.48);
@@ -31,7 +120,7 @@ h1, h2{
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 160px;
+    width: 80%;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
@@ -52,61 +141,72 @@ h1, h2{
 .show {
     display: block;
 }
-
-main{
+.p415-bottom-section > *{
+    margin-top: 1rem;
+}
+.p415-bottom-section p {
+    background: #6E41E2;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    justify-content: center;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    width: 87px;
+    height: 94px;
+    color: #FFF8F8;
+    text-align: center;
+}
+.p415-bottom-section .p415-slot-section{
+    display: flex;
+    justify-content: center;
     width: 100%;
 }
 
-nav{
-    display: flex;
-    height: auto;
-    justify-content: flex-end;
-    align-items: center;
+.p415-bottom-section p > span:first-child{
     width: 100%;
+    font-weight: bold;
+    font-size: 2rem;
+    height: 1rem;
 }
-nav ul{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+.p415-bottom-section time {
     width: 100%;
-    text-decoration: none;
-    height: auto;
+    text-align: center;
 }
-nav ul li{
-    text-decoration: none;
-    display: inline-block;
+
+.p415-bottom-section label {
+    visibility: hidden;
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
 }
-nav ul li a{
-    color: black;
+
+.p415-bottom-section textarea {
+    width: 90%;
     padding: 1rem;
 }
-nav ul li img{
-    width: 90px;
-    height: 90px;
-}
 
-.p415-upperheader h1{
-    font-size: 2rem;
+.p415-bottom-section input[value="BOOK"]{
+    width: 8rem;
+    background: #15B843;
+    border-radius: 4rem;
+    padding: 0.5rem;
+    border: none;
+    color: white;
+    font-weight: bolder;
 }
-
-.p415-upperheader h2{
-    font-size: 1rem;
+footer p{
+    text-align: center;
 }
+@media screen and (min-width: 60rem) {
+    .p415-mid-section img {
+        max-width: 923px;
+        margin-top: 0;
+        width: 60%;
+    }
 
-.p415-mid-section{
-    display: flex;
-    width: 100%;
-}
-
-.p415-mid-section p{
-    width: 100%;
-    position: absolute;
-}
-
-.p415-mid-section img{
-    width: 100%;
-    margin-top: 3rem;
-    height: auto;
+    .p415-mid-section p {
+        position: relative;
+        padding-left: 2rem;
+    }
 }
