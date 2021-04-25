@@ -63,7 +63,7 @@ a{
 .p415-login-card nav ul{
     display: flex;
     width: 100%;
-    padding-left: 1.2rem;
+    padding-left: 0.9rem;
     align-items: center;
     text-align: center;
     height: 3rem;
@@ -74,10 +74,14 @@ a{
     height: auto;
 }
 .p415-login-card nav ul li a{
-    padding: 1rem;
+    padding: 1rem 0;
+}
+.p415-login-card nav ul li:nth-child(2) a{
+    font-weight: normal;
+    color: #6B6B6B;
 }
 .p415-login-card nav ul li a.active{
-    border-bottom: 1px solid #6E41E2;
+    border-bottom: 2px solid #6E41E2;
 }
 .p415-login-card .p415-link-section{
     display: flex;
@@ -113,6 +117,8 @@ a{
 }
 .p415-login-card nav ul li a{
     color: black;
+    font-weight: 400;
+    font-family: 'Roboto';
 }
 main img{
     display: none;
