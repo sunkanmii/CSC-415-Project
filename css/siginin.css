@@ -31,7 +31,7 @@ a{
     position: absolute;
     visibility: hidden;
 }
-.p415-mail-section input[type="email"], .p415-mail-section input[type="password"]{
+.p415-mail-section input[type="email"], .p415-mail-section input[type="password"], .p415-mail-section input[type="text"], .p415-mail-section input[type="number"]{
     padding: 1rem;
     width: 91%;
     border: none;
@@ -126,6 +126,10 @@ main img{
     position: absolute;
     bottom: 0;
     z-index: -1;
+}
+main .p415-float-right{
+    display: inline-block;
+    float: right;
 }
 @media screen and (min-width: 40rem) {
     main{
