@@ -41,7 +41,7 @@ a{
 .p415-login-container .p415-login-card{
     display: flex;
     background-color: white;
-    width: 474px;
+    width: 525px;
     min-height: 29rem;
     flex-wrap: wrap;
     align-items: center;
@@ -155,7 +155,16 @@ main .p415-float-right{right: 0;}
 .alert-success{
     color: green;
 }
+/* label color for file upload */
+.drag-drop-section label span{
+    color: black;
+    font-size: 0.8rem;
+}
 
+/* Display messsage if file got uploaded */
+#p415-display-message{
+    display: none;
+}
 @media screen and (min-width: 40rem) {
     main{
         justify-content: unset;

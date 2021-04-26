@@ -1,14 +1,17 @@
-let dropArea = document.getElementById('drop-area')
-
-dropArea.addEventListener('dragenter', handlerFunction, false)
-dropArea.addEventListener('dragleave', handlerFunction, false)
-dropArea.addEventListener('dragover', handlerFunction, false)
-dropArea.addEventListener('drop', handlerFunction, false)
-
+const CLOUDINARY_PRESET = 'njr1g5gt';
+const displayMsg = document.querySelector("#p415-display-message");
+let dropArea = document.getElementById('drop-area');
+// Track file progress
+let filesDone = 0;
+let filesToDo = 0;
+let progressBar = document.getElementById('progress-bar');
+let uploadProgress = [];
+;
 ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
     dropArea.addEventListener(eventName, preventDefaults, false)
 })
 
+;
 ['dragenter', 'dragover'].forEach(eventName => {
     dropArea.addEventListener(eventName, highlight, false)
 })
@@ -17,6 +20,27 @@ dropArea.addEventListener('drop', handlerFunction, false)
 ['dragleave', 'drop'].forEach(eventName => {
     dropArea.addEventListener(eventName, unhighlight, false)
 })
+
+function handleFiles(files) {
+    ([...files]).forEach(uploadFile)
+    initializeProgress(files.length)
+}
+
+function initializeProgress(numfiles) {
+    progressBar.value = 0
+    uploadProgress = []
+
+    for(let i = numFiles; i > 0; i--) {
+      uploadProgress.push(0)
+    }
+}
+
+function updateProgress(fileNumber, percent) {
+    uploadProgress[fileNumber] = percent
+  let total = uploadProgress.reduce((tot, curr) => tot + curr, 0) / uploadProgress.length
+  progressBar.value = total
+    
+}
 
 function highlight(e) {
     dropArea.classList.add('highlight')
@@ -31,27 +55,8 @@ function preventDefaults(e) {
     e.stopPropagation()
 }
 
-function handleFiles(files) {
-    ([...files]).forEach(uploadFile)
-}
-
-function uploadFile(file) {
-    let url = 'YOUR URL HERE'
-    let formData = new FormData()
-
-    formData.append('file', file)
-
-    fetch(url, {
-            method: 'POST',
-            body: formData
-        })
-        .then(() => {
-            console.log("File uploaded.") })
-        .catch(() => {
-            throw new Error("Error with file") })
-}
-
 dropArea.addEventListener('drop', handleDrop, false)
+
 
 function handleDrop(e) {
     let dt = e.dataTransfer
@@ -60,6 +65,33 @@ function handleDrop(e) {
     handleFiles(files)
 }
 
-function handleFiles(files) {
-    ([...files]).forEach(uploadFile)
+function uploadFile(file, i) {
+    let url = '	https://api.cloudinary.com/v1_1/kanmi24/upload';
+
+    var xhr = new XMLHttpRequest()
+    var formData = new FormData()
+    xhr.open('POST', url, true);
+    formData.append('upload_preset', CLOUDINARY_PRESET);
+    
+    xhr.upload.addEventListener("progress", function(e) {
+        updateProgress(i, (e.loaded * 100.0 / e.total) || 100)
+    })
+
+    xhr.addEventListener('readystatechange', function(e) {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            displayMsg.textContent = "Upload Successful!";
+            displayMsg.style.display = "inline-block";
+            displayMsg.classList.add("alert-success");
+            console.log(e);
+        }
+        else if (xhr.readyState == 4 && xhr.status != 200) {
+            displayMsg.textContent = "Failed to upload image.";
+            displayMsg.style.display = "inline-block";
+            displayMsg.classList.add("alert-danger");
+            console.log(e)
+        }
+      })
+    
+      formData.append('file', file)
+      xhr.send(formData)
 }

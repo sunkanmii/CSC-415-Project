@@ -8,7 +8,7 @@
 }
 
 #drop-area.highlight {
-    border-color: purple;
+    border: 1px solid purple;
 }
 
 p {
@@ -55,12 +55,39 @@ span#small-text{
 .drag-drop-section label.button-for-file{
     position: relative;
     visibility: visible;
-    width: 59%;
+    width: 40%;
     text-align: end;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: #6e41e2;
+    cursor: pointer;
     padding-left: 2rem;
+}
+.spandrg {
+    font-size: 0.8rem;
 }
 #fileElem {
     display: none;
+}
+
+.img_preview_container {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+   justify-content: center;
+}
+.img_preview_txt{
+    font-size: 8px;
+}
+
+.image_preview_img{
+    margin-left: 2px;
+    margin-right: 0px;
+    padding-right: 0px;
+    position: relative;
+    width: 90%;
+    height: 45px;
+    z-index: 1000;
+    align-items: center;
+    border-radius: 50%;
 }
