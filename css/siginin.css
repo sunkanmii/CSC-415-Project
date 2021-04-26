@@ -151,9 +151,31 @@ main .p415-float-right{right: 0;}
 }
 .alert-danger{
     background-color: lightcoral;
+    border-radius: 4%;
+    font-style: normal;
+    font-size: 0.9rem;
+    margin-top: 2px;
+    text-align: center;
+    padding: 5px;
+    font-weight: normal;
+    display: block;
+    position: absolute;
+    top: 0px;
+    width: 35%;
 }
 .alert-success{
     color: green;
+    border-radius: 4%;
+    font-style: normal;
+    font-size: 0.9rem;
+    margin-top: 2px;
+    text-align: center;
+    padding: 5px;
+    font-weight: normal;
+    display: block;
+    position: absolute;
+    top: 0px;
+    width: 35%;
 }
 /* label color for file upload */
 .drag-drop-section label span{
