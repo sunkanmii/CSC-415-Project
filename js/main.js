@@ -1,6 +1,8 @@
 const allStatuses = document.querySelectorAll(".p415-work-status-update-green");
 const getSlotValue = document.querySelector("#slots");
 const getSlotSuffix = document.querySelector("#slots-suffix");
+const getErrorMsg = document.querySelector(".error-message");
+const userPassword = document.querySelector(".p415-mail-section input[type='password']");
 
 for (let i = 0; i < allStatuses.length; i++) {
     if (allStatuses[i].innerText === "Cancelled") {
@@ -37,3 +39,21 @@ function changeSuffix(){
     }
 }
 changeSuffix();
+
+function checkValidPassword(){
+//  Compare user password with one in db
+    if(userPassword == ""){
+        getErrorMsg.textContent = "success";
+        getErrorMsg.style.display ="inline-block";
+        if(getErrorMsg.classList.contains("success") == false){
+            getErrorMsg.classList.toggle("success");
+        }
+    }
+    else{
+        getErrorMsg.textContent= "Error";
+        getErrorMsg.style.display ="inline-block";
+        if(getErrorMsg.classList.contains("red") == false){
+            getErrorMsg.classList.toggle("red")
+        }
+    }
+}
