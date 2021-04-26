@@ -30,7 +30,7 @@
                     </ul>
                 </nav>
 
-                <section class="p415-mail-section">
+                <form method="POST" class="p415-mail-section" id="form1">
                     <label for="user-name">Name</label>
                     <input id="user-name" type="text" placeholder="Your full name" name="name" required
                         autocomplete="name" />
@@ -63,11 +63,11 @@
                         <input type="checkbox" required /> <label id="privacy-policy">I accept the terms of the offer of
                             <span>the privacy policy</span></label>
                     </section>
-                </section>
+                </form>
 
                 <section class="p415-link-section">
-                    <a href="#" class="p415-link active">Registration</a>
-                    <a href="#" class="p415-link">Sign in</a>
+                    <button type="submit" form="form1" class="p415-link active">Registration</button>
+                    <a href="login.php" class="p415-link">Sign in</a>
                 </section>
             </section>
         </section>
