@@ -42,7 +42,7 @@
 
                 <section class="p415-link-section">
                     <button type="submit" form="form1" class="p415-link active">Sign in</button>
-                    <a href="registration.html" class="p415-link">Registration</a>
+                    <a href="registration.php" class="p415-link">Registration</a>
                 </section>
             </form>
         </section>
