@@ -16,6 +16,7 @@
         rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="./css/index.css">
     <link rel="stylesheet" type="text/css" media="screen" href="./css/siginin.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/drag-drop.css">
 </head>
 
 <body>
@@ -36,10 +37,12 @@
                         autocomplete="name" />
                     <section id="drop-area">
                         <section class="drag-drop-section">
-                            <p>Upload multiple files with the file dialog or by dragging and dropping images onto the dashed
-                                region</p>
+                            <p>
+                                <span>Profile picture</span> 
+                            <span id ="small-text">PNG, jpg, gif files up to 10 MB</span>
+                            </p>
+                            <label class="button-for-file" for="fileElem">Select some files <span> or drag in form</span></label>
                             <input type="file" id="fileElem" accept="image/*" onchange="handleFiles(this.files)">
-                            <label class="button-for-file" for="fileElem">Select some files</label><p> or drag in form</p>
                         </section>
                     </section>
                     <label for="user-email">Email</label>
