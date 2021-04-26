@@ -42,7 +42,7 @@
                             <span id ="small-text">PNG, jpg, gif files up to 10 MB</span>
                             </p>
                             <label class="button-for-file" for="fileElem">Select some files <span> or drag in form</span></label>
-                            <input type="file" id="fileElem" accept="image/*" onchange="handleFiles(this.files)">
+                            <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
                         </section>
                     </section>
                     <label for="user-email">Email</label>
@@ -75,7 +75,8 @@
         </section>
         <img class="p415-float-right" src="./imgs/8401-1.svg" alt="" />
     </main>
-    <script src="main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous"></script>
+    <script src="./js/drag-drop.js"></script>
 </body>
 
 </html>
