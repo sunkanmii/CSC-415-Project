@@ -1,20 +1,15 @@
+const CLOUDINARY_PRESET = 'njr1g5gt';
 let dropArea = document.getElementById('drop-area')
 
-dropArea.addEventListener('dragenter', handlerFunction, false)
-dropArea.addEventListener('dragleave', handlerFunction, false)
-dropArea.addEventListener('dragover', handlerFunction, false)
-dropArea.addEventListener('drop', handlerFunction, false)
-
-['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+;['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
     dropArea.addEventListener(eventName, preventDefaults, false)
 })
 
-['dragenter', 'dragover'].forEach(eventName => {
+;['dragenter', 'dragover'].forEach(eventName => {
     dropArea.addEventListener(eventName, highlight, false)
 })
 
-;
-['dragleave', 'drop'].forEach(eventName => {
+;['dragleave', 'drop'].forEach(eventName => {
     dropArea.addEventListener(eventName, unhighlight, false)
 })
 
@@ -35,31 +30,36 @@ function handleFiles(files) {
     ([...files]).forEach(uploadFile)
 }
 
-function uploadFile(file) {
-    let url = 'YOUR URL HERE'
-    let formData = new FormData()
-
-    formData.append('file', file)
-
-    fetch(url, {
-            method: 'POST',
-            body: formData
-        })
-        .then(() => {
-            console.log("File uploaded.") })
-        .catch(() => {
-            throw new Error("Error with file") })
-}
 
 dropArea.addEventListener('drop', handleDrop, false)
 
+function handleFiles(files) {
+    ([...files]).forEach(uploadFile)
+}
 function handleDrop(e) {
     let dt = e.dataTransfer
     let files = dt.files
-
+    
     handleFiles(files)
 }
 
-function handleFiles(files) {
-    ([...files]).forEach(uploadFile)
+function uploadFile(file) {
+    let url = '	https://api.cloudinary.com/v1_1/kanmi24/upload'
+    
+    let formData = new FormData();
+    formData.append('file', file);
+    formData.append('upload_preset', CLOUDINARY_PRESET);
+
+    axios({
+        url: url,
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        data: formData
+    }).then(function(res) {
+        console.log(res);
+    }).catch(function(err) {
+        console.error(err);
+    })
 }
