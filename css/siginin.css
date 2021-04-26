@@ -91,10 +91,9 @@ a{
     height: auto;
     flex-wrap: wrap;
 }
-.p415-link-section button, .p415-link-section a{
+.p415-link-section .p415-link:first-child, .p415-link-section a{
     color: white;
     cursor: pointer;
-    background-color: white;
 }
 .p415-link-section a{
     color: #6E41E2;
