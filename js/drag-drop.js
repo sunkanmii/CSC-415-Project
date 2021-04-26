@@ -26,7 +26,7 @@ function handleFiles(files) {
     initializeProgress(files.length)
 }
 
-function initializeProgress(numfiles) {
+function initializeProgress(numFiles) {
     progressBar.value = 0
     uploadProgress = []
 
