@@ -1,10 +1,10 @@
 #drop-area {
-    border: 2px dashed #ccc;
-    border-radius: 20px;
-    width: 480px;
+    box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.04), 0px 4px 16px rgba(51, 51, 51, 0.08);
+    width: 90%;
     font-family: sans-serif;
-    margin: 100px auto;
     padding: 20px;
+    margin: 1rem 0;
+    height: auto;
 }
 
 #drop-area.highlight {
@@ -13,8 +13,15 @@
 
 p {
     margin-top: 0;
+    color: rgba(17, 17, 17, 0.48);
 }
-
+p span{
+    display: block;
+}
+span#small-text{
+    font-size: 0.65rem;
+    order: 3;
+}
 .my-form {
     margin-bottom: 10px;
 }
@@ -42,7 +49,18 @@ p {
 .button:hover {
     background: #ddd;
 }
-
+.drag-drop-section{
+    display: flex;
+}
+.drag-drop-section label.button-for-file{
+    position: relative;
+    visibility: visible;
+    width: 59%;
+    text-align: end;
+    font-size: 0.9rem;
+    color: #6e41e2;
+    padding-left: 2rem;
+}
 #fileElem {
     display: none;
 }
