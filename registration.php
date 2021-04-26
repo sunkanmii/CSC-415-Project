@@ -63,12 +63,11 @@
                         <input type="checkbox" required /> <label id="privacy-policy">I accept the terms of the offer of
                             <span>the privacy policy</span></label>
                     </section>
+                    <section class="p415-link-section">
+                        <input type="submit" form="form1" class="p415-link active" value="Registration">
+                        <a href="login.php" class="p415-link">Sign in</a>
+                    </section>
                 </form>
-
-                <section class="p415-link-section">
-                    <button type="submit" form="form1" class="p415-link active">Registration</button>
-                    <a href="login.php" class="p415-link">Sign in</a>
-                </section>
             </section>
         </section>
         <img class="p415-float-right" src="./imgs/8401-1.svg" alt="" />
