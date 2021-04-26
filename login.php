@@ -25,8 +25,8 @@
                 <h1>Profile</h1>
                 <nav>
                     <ul>
-                        <li><a class="active" href="./login.html">Sign in</a></li>
-                        <li><a href="./registration.html">Registration</a></li>
+                        <li><a class="active" href="./login.php">Sign in</a></li>
+                        <li><a href="./registration.php">Registration</a></li>
                     </ul>
                 </nav>
 
