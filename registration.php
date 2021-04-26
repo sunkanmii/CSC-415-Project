@@ -71,8 +71,9 @@ if ($errormsg != "") {
 <body>
     <main>
         <section class="p415-login-container">
-            <div> <?php echo $errormsg ?></div>
+           
             <section class="p415-login-card">
+                <div> <?php echo $errormsg ?></div>
                 <h1>Profile</h1>
                 <nav>
                     <ul>
