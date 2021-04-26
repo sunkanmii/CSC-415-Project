@@ -21,7 +21,7 @@
 <body>
     <main>
         <section class="p415-login-container">
-            <section class="p415-login-card">
+            <form class="p415-login-card" id="form1">
                 <h1>Profile</h1>
                 <nav>
                     <ul>
@@ -41,10 +41,10 @@
                 </section>
 
                 <section class="p415-link-section">
-                    <a href="#" class="p415-link active">Sign in</a>
-                    <a href="#"class="p415-link">Registration</a>
+                    <button type="submit" form="form1" class="p415-link active">Sign in</button>
+                    <a href="registration.php" class="p415-link">Registration</a>
                 </section>
-            </section>
+            </form>
         </section>
         <img src="./imgs/5972-1.svg" alt="" />
     </main>
