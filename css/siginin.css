@@ -127,9 +127,25 @@ main img{
     bottom: 0;
     z-index: -1;
 }
-main .p415-float-right{
-    display: inline-block;
-    float: right;
+main .p415-float-right{right: 0;}
+.p415-mail-section input[type="checkbox"]{
+    width: 10%;
+    height: 1rem;
+    cursor: pointer;
+}
+.p415-checkbox-section{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 2rem;
+}
+.p415-checkbox-section label span{
+    color: #6E41E2;
+}
+.p415-checkbox-section label{width: 85%;}
+#privacy-policy{
+    visibility: visible;
+    position: relative;
 }
 @media screen and (min-width: 40rem) {
     main{

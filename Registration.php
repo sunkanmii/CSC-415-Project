@@ -1,70 +1,70 @@
 <!DOCTYPE html>
-  <html>
-  <head>
-        <meta charset='utf-8'>
-        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-        <title>Registration</title>
-        <meta name='viewport' content='width=device-width, initial-scale=1'>
-        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-     <link href = "signin.css" rel = "stylesheet"  type = "text/css">
-   </head>
-     <body>
-  <div class="form">
+<html lang="en">
 
-   <div class="tab-header">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
 
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/index.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/siginin.css">
+</head>
 
-        <h1> Profile</h1>
+<body>
+    <main>
+        <section class="p415-login-container">
+            <section class="p415-login-card">
+                <h1>Profile</h1>
+                <nav>
+                    <ul>
+                        <li><a class="active" href="./registration.php">Registration</a></li>
+                        <li><a href="./login.php">Sign in</a></li>
+                    </ul>
+                </nav>
 
-      
-        <a  href = ./Registrationin.html > Registration</a>|<a href = ./signin.html>Sign in</a>
-   
-        <form action="MAILTO:someone@example.com" method="post" enctype="text/plain">
-        
-<div  class="form-element">
-        <input type="text" class= "input-field"  placeholder= "Your name"  ><br>
-</div>
+                <section class="p415-mail-section">
+                    <label for="user-name">Name</label>
+                    <input id="user-name" type="text" placeholder="Your full name" name="name" required
+                        autocomplete="name" />
 
-<div  class="form-element">
-        <input type="text" class= "input-field"  placeholder= "Profile  Picture"><br>
-       
-</div>
+                    <label for="user-email">Email</label>
+                    <input id="user-email" type="email" placeholder="E-mail" name="new-email" required
+                        autocomplete="email" />
 
+                    <label for="user-matric">Matriculation Number</label>
+                    <input id="user-matric" type="number" placeholder="Matric Number" minlength="9" maxlength="9"
+                        name="matric-no" required autocomplete="cc-number" />
 
-<div  class="form-element">
-        <input type="text" class= "input-field"  placeholder= "Email"><br>
-       
-</div>
-        
-<div  class="form-element">
-  
-  <input type="text" class= "input-field"  placeholder= "Matric Number"><br>
+                    <label for="user-password">Password</label>
+                    <input id="user-password" type="password" placeholder="Password"
+                        name="new-password" required autocomplete="current-password" />
 
-</div>
+                    <label for="user-retype-password">Retype Password</label>
+                    <input id="user-retype-password" type="password" placeholder="Retype Password"
+                        name="confirm-password" required autocomplete="new-password" />
 
-<div  class="form-element">
-  
- 
-        <input type="text" class= "input-field"  placeholder= "  Password"><br>
-</div>
-        
-<div class=" form-element">
-                
-<input type="checkbox" name="vehicle1" value="Bike"> <b>I accept the term of the offer of</b><div>the privacy policy</div><br>
+                        <section class="p415-checkbox-section">
+                            <input type="checkbox" required/> <label id="privacy-policy">I accept the terms of the offer of <span>the privacy policy</span></label>
+                        </section>
+                </section>
 
-</div>
-<div class=" form-element">
-       
-<input type="button" value  =  "Registration"  ><br>
-</div>
-<a  href = ./signin.html >Sign in </a>
-<br>
-    
-</form>
+                <section class="p415-link-section">
+                    <a href="#" class="p415-link active">Registration</a>
+                    <a href="#" class="p415-link">Sign in</a>
+                </section>
+            </section>
+        </section>
+        <img class="p415-float-right"src="./imgs/8401-1.svg" alt="" />
+    </main>
+    <script src="main.js"></script>
+</body>
 
-   </div>
-        </div>
-      </p>
-  </body>
-  </html>
+</html>
