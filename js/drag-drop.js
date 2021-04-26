@@ -1,17 +1,41 @@
 const CLOUDINARY_PRESET = 'njr1g5gt';
-let dropArea = document.getElementById('drop-area')
-
-;['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+const displayMsg = document.querySelector("#p415-display-message");
+let dropArea = document.getElementById('drop-area');
+// Track file progress
+let filesDone = 0;
+let filesToDo = 0;
+let progressBar = document.getElementById('progress-bar');
+let uploadProgress = [];
+;
+['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
     dropArea.addEventListener(eventName, preventDefaults, false)
 })
 
-;['dragenter', 'dragover'].forEach(eventName => {
+;
+['dragenter', 'dragover'].forEach(eventName => {
     dropArea.addEventListener(eventName, highlight, false)
 })
 
-;['dragleave', 'drop'].forEach(eventName => {
+;
+['dragleave', 'drop'].forEach(eventName => {
     dropArea.addEventListener(eventName, unhighlight, false)
 })
+
+function initializeProgress(numfiles) {
+    progressBar.value = 0
+    uploadProgress = []
+
+    for(let i = numFiles; i > 0; i--) {
+      uploadProgress.push(0)
+    }
+}
+
+function updateProgress(res) {
+    uploadProgress[fileNumber] = percent
+  let total = uploadProgress.reduce((tot, curr) => tot + curr, 0) / uploadProgress.length
+  progressBar.value = total
+    
+}
 
 function highlight(e) {
     dropArea.classList.add('highlight')
@@ -26,40 +50,47 @@ function preventDefaults(e) {
     e.stopPropagation()
 }
 
-function handleFiles(files) {
-    ([...files]).forEach(uploadFile)
-}
-
-
 dropArea.addEventListener('drop', handleDrop, false)
 
 function handleFiles(files) {
     ([...files]).forEach(uploadFile)
+    initializeProgress(files.length)
 }
+
 function handleDrop(e) {
     let dt = e.dataTransfer
     let files = dt.files
-    
+
     handleFiles(files)
 }
 
 function uploadFile(file) {
-    let url = '	https://api.cloudinary.com/v1_1/kanmi24/upload'
-    
-    let formData = new FormData();
-    formData.append('file', file);
-    formData.append('upload_preset', CLOUDINARY_PRESET);
+    let url = '	https://api.cloudinary.com/v1_1/kanmi24/upload';
 
-    axios({
-        url: url,
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded'
-        },
-        data: formData
-    }).then(function(res) {
-        console.log(res);
-    }).catch(function(err) {
-        console.error(err);
+    var xhr = new XMLHttpRequest()
+    var formData = new FormData()
+    xhr.open('POST', url, true);
+    formData.append('upload_preset', CLOUDINARY_PRESET);
+    
+    xhr.upload.addEventListener("progress", function(e) {
+        updateProgress(i, (e.loaded * 100.0 / e.total) || 100)
     })
+
+    xhr.addEventListener('readystatechange', function(e) {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            displayMsg.textContent = "Upload Successful!";
+            displayMsg.style.display = "inline-block";
+            displayMsg.classList.add("alert-success");
+            console.log(res);
+        }
+        else if (xhr.readyState == 4 && xhr.status != 200) {
+            displayMsg.textContent = "Failed to upload image.";
+            displayMsg.style.display = "inline-block";
+            displayMsg.classList.add("alert-danger");
+            console.log(err)
+        }
+      })
+    
+      formData.append('file', file)
+      xhr.send(formData)
 }

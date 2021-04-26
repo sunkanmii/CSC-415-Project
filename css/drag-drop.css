@@ -8,7 +8,7 @@
 }
 
 #drop-area.highlight {
-    border-color: purple;
+    border: 1px solid purple;
 }
 
 p {
@@ -57,8 +57,9 @@ span#small-text{
     visibility: visible;
     width: 59%;
     text-align: end;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: #6e41e2;
+    cursor: pointer;
     padding-left: 2rem;
 }
 #fileElem {

@@ -44,6 +44,8 @@
                             <label class="button-for-file" for="fileElem">Select some files <span> or drag in form</span></label>
                             <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
                         </section>
+                        <progress id="progress-bar" max=100 value=0></progress>
+                        <p id="p415-display-message"></p>
                     </section>
                     <label for="user-email">Email</label>
                     <input id="user-email" type="email" placeholder="E-mail" name="new-email" required
@@ -75,7 +77,7 @@
         </section>
         <img class="p415-float-right" src="./imgs/8401-1.svg" alt="" />
     </main>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous"></script> -->
     <script src="./js/drag-drop.js"></script>
 </body>
 
