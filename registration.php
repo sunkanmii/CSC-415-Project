@@ -95,11 +95,10 @@ if ($errormsg != "") {
                             <label class="button-for-file" for="fileElem">Select<span class="spandrg"> or drag in form</span></label>
                             <input type="file" id="fileElem"  accept="image/*" name="profilepics" required >
                             
-                            <section class="img_preview_container" id="preview_img_con">
+                            <!-- <section class="img_preview_container" id="preview_img_con">
                                 <img src="imgs/profileavatar.png" alt="" class="image_preview_img">
-                               <!-- <span class="img_preview_txt"> image preview</span> -->
-                            </section>
-                        </section>
+                                <span class="img_preview_txt"> image preview</span> -->
+                            <!-- </section> -->                       </section>
                         <progress id="progress-bar" max=100 value=0></progress>
                         <p id="p415-display-message"></p>
                     </section>
@@ -137,23 +136,23 @@ if ($errormsg != "") {
     <script src="./js/drag-drop.js"></script>
 
    <script>
-            const input_img = document.getElementById('fileElem');
-            const preview_container = document.getElementById('preview_img_con');
-            const previewimg = preview_container.querySelector('.image_preview_img');
+            // const input_img = document.getElementById('fileElem');
+            // const preview_container = document.getElementById('preview_img_con');
+            // const previewimg = preview_container.querySelector('.image_preview_img');
 
-            input_img.addEventListener("change", function(){
-                const file = this.files[0];
+            // input_img.addEventListener("change", function(){
+            //     const file = this.files[0];
 
-                if (file) {
-                    const reader = new FileReader();
+            //     if (file) {
+            //         const reader = new FileReader();
 
-                    reader.addEventListener("load",function(){
-                        previewimg.setAttribute("src",this.result);
-                    });
+            //         reader.addEventListener("load",function(){
+            //             previewimg.setAttribute("src",this.result);
+            //         });
 
-                    reader.readAsDataURL(file);
-                }
-            })
+            //         reader.readAsDataURL(file);
+            //     }
+            // })
    </script>
 </body>
 
