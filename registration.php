@@ -71,6 +71,7 @@ if ($errormsg != "") {
 <body>
     <main>
         <section class="p415-login-container">
+            <div> <?php echo $errormsg ?></div>
             <section class="p415-login-card">
                 <h1>Profile</h1>
                 <nav>
@@ -91,7 +92,7 @@ if ($errormsg != "") {
                             <span id ="small-text">PNG, jpg up to 10 MB</span>
                             </p>
                             <label class="button-for-file" for="fileElem">Select<span class="spandrg"> or drag in form</span></label>
-                            <input type="file" id="fileElem"  accept="image/*" name="profilepics"  >
+                            <input type="file" id="fileElem"  accept="image/*" name="profilepics" required >
                             
                             <section class="img_preview_container" id="preview_img_con">
                                 <img src="imgs/profileavatar.png" alt="" class="image_preview_img">
