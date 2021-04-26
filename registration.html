@@ -34,7 +34,14 @@
                     <label for="user-name">Name</label>
                     <input id="user-name" type="text" placeholder="Your full name" name="name" required
                         autocomplete="name" />
-
+                    <section id="drop-area">
+                        <section class="drag-drop-section">
+                            <p>Upload multiple files with the file dialog or by dragging and dropping images onto the dashed
+                                region</p>
+                            <input type="file" id="fileElem" accept="image/*" onchange="handleFiles(this.files)">
+                            <label class="button-for-file" for="fileElem">Select some files</label><p> or drag in form</p>
+                        </section>
+                    </section>
                     <label for="user-email">Email</label>
                     <input id="user-email" type="email" placeholder="E-mail" name="new-email" required
                         autocomplete="email" />
@@ -44,16 +51,18 @@
                         name="matric-no" required autocomplete="cc-number" />
 
                     <label for="user-password">Password</label>
-                    <input id="user-password" type="password" placeholder="Password"
-                        name="new-password" required autocomplete="current-password" />
+                    <input id="user-password" type="password" placeholder="Password" name="new-password" required
+                        autocomplete="current-password" />
 
                     <label for="user-retype-password">Retype Password</label>
                     <input id="user-retype-password" type="password" placeholder="Retype Password"
                         name="confirm-password" required autocomplete="new-password" />
 
-                        <section class="p415-checkbox-section">
-                            <input type="checkbox" required/> <label id="privacy-policy">I accept the terms of the offer of <span>the privacy policy</span></label>
-                        </section>
+
+                    <section class="p415-checkbox-section">
+                        <input type="checkbox" required /> <label id="privacy-policy">I accept the terms of the offer of
+                            <span>the privacy policy</span></label>
+                    </section>
                 </section>
 
                 <section class="p415-link-section">
@@ -62,7 +71,7 @@
                 </section>
             </section>
         </section>
-        <img class="p415-float-right"src="./imgs/8401-1.svg" alt="" />
+        <img class="p415-float-right" src="./imgs/8401-1.svg" alt="" />
     </main>
     <script src="main.js"></script>
 </body>
