@@ -147,10 +147,10 @@ main .p415-float-right{right: 0;}
     visibility: visible;
     position: relative;
 }
-p.red{
-    color: red;
+.alert-danger{
+    background-color: lightcoral;
 }
-p.green{
+.alert-success{
     color: green;
 }
 
