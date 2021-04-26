@@ -147,6 +147,13 @@ main .p415-float-right{right: 0;}
     visibility: visible;
     position: relative;
 }
+p.red{
+    color: red;
+}
+p.green{
+    color: green;
+}
+
 @media screen and (min-width: 40rem) {
     main{
         justify-content: unset;

@@ -38,7 +38,7 @@
                     <label for="user-password">Password</label>
                     <input id="user-email" type="password" placeholder="Password" name="password" required
                         autocomplete="current-password" />
-
+                    <p class="error-message red">Error</p>
                 </section>
 
                 <section class="p415-link-section">
