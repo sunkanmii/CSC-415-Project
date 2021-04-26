@@ -9,6 +9,23 @@ dropArea.addEventListener('drop', handlerFunction, false)
     dropArea.addEventListener(eventName, preventDefaults, false)
 })
 
+['dragenter', 'dragover'].forEach(eventName => {
+    dropArea.addEventListener(eventName, highlight, false)
+})
+
+;
+['dragleave', 'drop'].forEach(eventName => {
+    dropArea.addEventListener(eventName, unhighlight, false)
+})
+
+function highlight(e) {
+    dropArea.classList.add('highlight')
+}
+
+function unhighlight(e) {
+    dropArea.classList.remove('highlight')
+}
+
 function preventDefaults(e) {
     e.preventDefault()
     e.stopPropagation()
@@ -29,7 +46,20 @@ function uploadFile(file) {
             body: formData
         })
         .then(() => {
-            /* Done. Inform the user */ })
+            console.log("File uploaded.") })
         .catch(() => {
-            /* Error. Inform the user */ })
+            throw new Error("Error with file") })
+}
+
+dropArea.addEventListener('drop', handleDrop, false)
+
+function handleDrop(e) {
+    let dt = e.dataTransfer
+    let files = dt.files
+
+    handleFiles(files)
+}
+
+function handleFiles(files) {
+    ([...files]).forEach(uploadFile)
 }
