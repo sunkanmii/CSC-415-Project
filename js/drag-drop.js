@@ -21,6 +21,11 @@ let uploadProgress = [];
     dropArea.addEventListener(eventName, unhighlight, false)
 })
 
+function handleFiles(files) {
+    ([...files]).forEach(uploadFile)
+    initializeProgress(files.length)
+}
+
 function initializeProgress(numfiles) {
     progressBar.value = 0
     uploadProgress = []
@@ -30,7 +35,7 @@ function initializeProgress(numfiles) {
     }
 }
 
-function updateProgress(res) {
+function updateProgress(fileNumber, percent) {
     uploadProgress[fileNumber] = percent
   let total = uploadProgress.reduce((tot, curr) => tot + curr, 0) / uploadProgress.length
   progressBar.value = total
@@ -52,10 +57,6 @@ function preventDefaults(e) {
 
 dropArea.addEventListener('drop', handleDrop, false)
 
-function handleFiles(files) {
-    ([...files]).forEach(uploadFile)
-    initializeProgress(files.length)
-}
 
 function handleDrop(e) {
     let dt = e.dataTransfer
@@ -64,7 +65,7 @@ function handleDrop(e) {
     handleFiles(files)
 }
 
-function uploadFile(file) {
+function uploadFile(file, i) {
     let url = '	https://api.cloudinary.com/v1_1/kanmi24/upload';
 
     var xhr = new XMLHttpRequest()
@@ -81,13 +82,13 @@ function uploadFile(file) {
             displayMsg.textContent = "Upload Successful!";
             displayMsg.style.display = "inline-block";
             displayMsg.classList.add("alert-success");
-            console.log(res);
+            console.log(e);
         }
         else if (xhr.readyState == 4 && xhr.status != 200) {
             displayMsg.textContent = "Failed to upload image.";
             displayMsg.style.display = "inline-block";
             displayMsg.classList.add("alert-danger");
-            console.log(err)
+            console.log(e)
         }
       })
     
