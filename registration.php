@@ -43,6 +43,7 @@ if ($errormsg != "") {
 } else{
         $full_name = $_POST['name'];
         $profile_pic =  $_POST['profilepics'];
+        
         $email = $_POST['new-email'];
         $matric = $_POST['matric-no'];
         $password = md5($_POST['new-password']);
