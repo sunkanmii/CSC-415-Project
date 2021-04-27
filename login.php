@@ -4,6 +4,7 @@ if(session_status() == PHP_SESSION_NONE){
     //session has not started
     session_start();
 }
+
 if ( isset($_SESSION['success_msg'])) {
     echo $_SESSION['success_msg'];
 
@@ -12,7 +13,55 @@ if ( isset($_SESSION['success_msg'])) {
     //start it again
     session_start();
 }
-   
+
+
+$errormsg ="";
+if ($_SERVER['REQUEST_METHOD']=='POST') {
+    
+    $matric = 0;
+    $passwrod ="";
+
+    if (empty($_POST['matric-no'])) {
+        $errormsg .= "matric-no id required <br>";
+    }
+    
+    if (empty($_POST['password'])) {
+        $errormsg .= "password field is required <br>";
+    }
+
+    if ($errormsg != "") {
+        $errormsg .= '<h6 class="alert-danger" >'.$errormsg.'</h6>';
+    }
+    else {
+        $matric = $_POST['matric-no'];
+        $password = md5($_POST['password']);
+
+        include 'connect.php';
+
+        $check_exist = "SELECT `student_matricno` ,`student_password`
+                        FROM      `dbnh41dWFL`.`users`
+                        WHERE    student_matricno='".$matric."' AND student_password ='".$password."' ";
+
+        $resultUsr = mysqli_query($conn,$check_exist);
+
+        if (count(mysqli_fetch_all($resultUsr) )>0) {
+            //echo '<h6 class=" alert-success" > User  exists </h6>'; 
+            $_SESSION['user-matric'] = $matric;
+
+            if ($matric == 160805007) {
+                header("Location: dashboard.php");
+            } else {
+                header("Location: index.php");
+            }
+
+        } else {
+            echo '<h6 class=" alert-danger" style="width:100%" > Incorrect details or User does not exists! </h6>';
+        }
+
+
+    }
+    
+}
 
 
 ?>
@@ -41,6 +90,7 @@ if ( isset($_SESSION['success_msg'])) {
 <body>
     <main>
         <section class="p415-login-container">
+        <section> <?php echo $errormsg ?></section>
             <form class="p415-login-card" id="form1" method="POST">
                 <h1>Profile</h1>
                 <nav>
@@ -52,8 +102,8 @@ if ( isset($_SESSION['success_msg'])) {
 
                 <section class="p415-mail-section">
                     <label for="user-email">Email</label>
-                    <input id="user-email" type="email" placeholder="Email" name="email" required
-                        autocomplete="email" />
+                    <input id="user-email" type="number" placeholder="Matric Number" minlength="9" maxlength="9"
+                        name="matric-no" required autocomplete="cc-number" />
 
                     <label for="user-password">Password</label>
                     <input id="user-email" type="password" placeholder="Password" name="password" required

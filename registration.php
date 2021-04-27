@@ -39,7 +39,7 @@ if ($_POST['confirm-password'] != $_POST['new-password']) {
 }
 
 if ($errormsg != "") {
-    $errormsg = '<h6 class=" alert-danger" >'.$errormsg.'</h6>';
+    $errormsg = '<h6 class="alert-danger" >'.$errormsg.'</h6>';
 } else{
         $full_name = $_POST['name'];
         $profile_pic =  $_POST['profilepics'];
@@ -59,7 +59,7 @@ if ($errormsg != "") {
         
 
         if (count(mysqli_fetch_all($resultUsr) )>0) {
-            echo "<p> User already exists!! </p>";  
+            echo '<h6 class=" alert-danger" > User already exists!! </h6>';  
         } 
         else {
             $insertUsr = "INSERT INTO `dbnh41dWFL`.`users` 
