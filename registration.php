@@ -133,7 +133,7 @@ if ($errormsg != "") {
                             <span id ="small-text">PNG, jpg up to 10 MB</span>
                             </p>
                             <label class="button-for-file" for="fileElem">Select<span class="spandrg"> or drag in form</span></label>
-                            <input type="file" id="fileElem"  accept="image/*" name="profilepics" required >
+                            <input type="file" id="fileElem"  accept="image/*" name="profilepics" required onchange="handleFiles(this.files)"/>
                             
                             <section class="img_preview_container" id="preview_img_con">
                                 <img src="imgs/profileavatar.png" alt="" class="image_preview_img">
