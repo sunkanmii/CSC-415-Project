@@ -1,3 +1,23 @@
+<?php
+
+if(session_status() == PHP_SESSION_NONE){
+    //session has not started
+    session_start();
+}
+if ( isset($_SESSION['success_msg'])) {
+    echo $_SESSION['success_msg'];
+
+    //kill session
+    session_destroy();
+    //start it again
+    session_start();
+}
+   
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 

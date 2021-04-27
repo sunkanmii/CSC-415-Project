@@ -164,7 +164,8 @@ main .p415-float-right{right: 0;}
     width: 35%;
 }
 .alert-success{
-    color: green;
+    color: white;
+    background-color: #4BB453;
     border-radius: 4%;
     font-style: normal;
     font-size: 0.9rem;
@@ -173,9 +174,9 @@ main .p415-float-right{right: 0;}
     padding: 5px;
     font-weight: normal;
     display: block;
-    position: absolute;
+    position: unset;
     top: 0px;
-    width: 35%;
+    
 }
 /* label color for file upload */
 .drag-drop-section label span{
