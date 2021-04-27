@@ -24,6 +24,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
   <link rel="stylesheet" type="text/css" href="./css/index.css">
@@ -95,6 +97,7 @@
         <div class="p415-session-card">
           <p class="p415-session-status">Active</p>
           <time datetime="2020" class="p415-session-year">2020</time>
+          <p class="p415-session">Session</p>
           <section class="p415-school-name">
             <i class="fas fa-graduation-cap"></i>
             <p>University of Lagos</p>
@@ -104,15 +107,17 @@
         <div class="p415-session-card">
           <p class="p415-session-status">Inactive</p>
           <time datetime="2019" class="p415-session-year">2019</time>
+          <p>Session</p>
           <section class="p415-school-name">
             <i class="fas fa-graduation-cap"></i>
             <p>University of Lagos</p>
           </section>
         </div>
-        
+
         <div class="p415-session-card">
           <p class="p415-session-status">Inactive</p>
           <time datetime="2018" class="p415-session-year">2018</time>
+          <p>Session</p>
           <section class="p415-school-name">
             <i class="fas fa-graduation-cap"></i>
             <p>University of Lagos</p>
@@ -122,15 +127,17 @@
         <div class="p415-session-card">
           <p class="p415-session-status">Inactive</p>
           <time datetime="2017" class="p415-session-year">2017</time>
+          <p>Session</p>
           <section class="p415-school-name">
             <i class="fas fa-graduation-cap"></i>
             <p>University of Lagos</p>
           </section>
         </div>
-        
+
         <div class="p415-session-card">
           <p class="p415-session-status">Inactive</p>
           <time datetime="2016" class="p415-session-year">2016</time>
+          <p>Session</p>
           <section class="p415-school-name">
             <i class="fas fa-graduation-cap"></i>
             <p>University of Lagos</p>
