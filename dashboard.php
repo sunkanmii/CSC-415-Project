@@ -1,6 +1,20 @@
 <?php
-    $conn = include('connect.php');
+
+    if(session_status() == PHP_SESSION_NONE){
+        //session has not started
+        session_start();
+    }
+    
+    if ( !isset($_SESSION['user-matric'])) {
+        header("Location: login.php");
+    
+    } elseif ($_SESSION['user-matric'] !=160805007) {
+        header("Location: login.php");
+    }
+
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en-US">
 <head>

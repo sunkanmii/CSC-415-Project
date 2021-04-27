@@ -1,3 +1,44 @@
+<?php 
+
+
+if(session_status() == PHP_SESSION_NONE){
+    //session has not started
+    session_start();
+}
+
+if ( !isset($_SESSION['user-matric'])) {
+    header("Location: login.php");
+
+}
+
+include 'connect.php';
+
+$matric = $_SESSION['user-matric'];
+
+$name = "Natasha Laurell";
+$profilepic = null;
+
+$usr = "SELECT * 
+        FROM     `dbnh41dWFL`.`users`
+        WHERE   student_matricno = '".$matric."'
+        ";
+
+if ($result = mysqli_query($conn,$usr)) {
+    
+    $usr_row = mysqli_fetch_array($result);
+
+    $name = $usr_row['student_name'];
+    $profilepic = $usr_row['student_image'];
+    
+    echo $profilepic;
+    
+
+
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en-US">
 
@@ -29,7 +70,7 @@
                 Welcome
             </h1>
             <h2>
-                Natasha Laurel
+                <?php echo $name ?>
             </h2>
         </section>
 

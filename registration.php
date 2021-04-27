@@ -1,8 +1,17 @@
 
 <?php 
 
-//session_destroy();
+if(session_status() == PHP_SESSION_NONE){
+    //session has not started
+    session_start();
+} else {
+    session_destroy();
+    //then
+    session_start();
+}
+
 $errormsg = "";
+$successmsg = "";
 if ($_SERVER["REQUEST_METHOD"]=="POST") {
 
 $full_name = "";
@@ -30,14 +39,46 @@ if ($_POST['confirm-password'] != $_POST['new-password']) {
 }
 
 if ($errormsg != "") {
-    $errormsg = '<h6>'.$errormsg.'</h6>';
+    $errormsg = '<h6 class="alert-danger" >'.$errormsg.'</h6>';
 } else{
         $full_name = $_POST['name'];
-        $profile_pic ="";
+        $profile_pic =  $_POST['profilepics'];
+        
         $email = $_POST['new-email'];
         $matric = $_POST['matric-no'];
-        $password = $_POST['new-password'];
-        $rtpassword = $_POST['confirm-password'];
+        $password = md5($_POST['new-password']);
+        $rtpassword = md5($_POST['confirm-password']);
+
+        include "connect.php";
+
+        $check_existing = "SELECT `student_matricno` 
+                           FROM      `dbnh41dWFL`.`users`
+                           WHERE    student_matricno='".$matric."' ";
+
+        $resultUsr = mysqli_query($conn,$check_existing);
+
+        
+
+        if (count(mysqli_fetch_all($resultUsr) )>0) {
+            echo '<h6 class=" alert-danger" > User already exists!! </h6>';  
+        } 
+        else {
+            $insertUsr = "INSERT INTO `dbnh41dWFL`.`users` 
+                          (`student_matricno`,`student_name`,`student_email`,`student_department`,`student_course_name`,`session`,`student_image`,`student_password`)
+                          VALUES ('".$matric."','".$full_name."','".$email."',null,null,null,'".$profile_pic."','".$password."')
+                            ";
+
+            if ($result = mysqli_query($conn,$insertUsr)) {
+
+                $successmsg .= "User Created Successfully";
+
+                $_SESSION['success_msg'] = '<h6 class="alert-success">'.$successmsg.'</h6>';
+
+                header("Location: login.php");
+
+        
+            }                
+        }
 
 }
 
@@ -45,7 +86,6 @@ if ($errormsg != "") {
 
 
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -73,7 +113,7 @@ if ($errormsg != "") {
         <section class="p415-login-container">
            
             <section class="p415-login-card">
-                <div> <?php echo $errormsg ?></div>
+                <section> <?php echo $errormsg ?></section>
                 <h1>Profile</h1>
                 <nav>
                     <ul>
@@ -95,10 +135,10 @@ if ($errormsg != "") {
                             <label class="button-for-file" for="fileElem">Select<span class="spandrg"> or drag in form</span></label>
                             <input type="file" id="fileElem"  accept="image/*" name="profilepics" required onchange="handleFiles(this.files)"/>
                             
-                            <!-- <section class="img_preview_container" id="preview_img_con">
+                            <section class="img_preview_container" id="preview_img_con">
                                 <img src="imgs/profileavatar.png" alt="" class="image_preview_img">
-                                <span class="img_preview_txt"> image preview</span> -->
-                            <!-- </section> -->                       </section>
+                            <!--    <span class="img_preview_txt"> image preview</span> -->
+                             </section>                     </section>
                         <progress id="progress-bar" max=100 value=0></progress>
                         <p id="p415-display-message"></p>
                     </section>
@@ -136,23 +176,23 @@ if ($errormsg != "") {
     <script src="./js/drag-drop.js"></script>
 
    <script>
-            // const input_img = document.getElementById('fileElem');
-            // const preview_container = document.getElementById('preview_img_con');
-            // const previewimg = preview_container.querySelector('.image_preview_img');
+            const input_img = document.getElementById('fileElem');
+            const preview_container = document.getElementById('preview_img_con');
+             const previewimg = preview_container.querySelector('.image_preview_img');
 
-            // input_img.addEventListener("change", function(){
-            //     const file = this.files[0];
+             input_img.addEventListener("change", function(){
+                 const file = this.files[0];
 
-            //     if (file) {
-            //         const reader = new FileReader();
+                 if (file) {
+                     const reader = new FileReader();
 
-            //         reader.addEventListener("load",function(){
-            //             previewimg.setAttribute("src",this.result);
-            //         });
+                     reader.addEventListener("load",function(){
+                         previewimg.setAttribute("src",this.result);
+                     });
 
-            //         reader.readAsDataURL(file);
-            //     }
-            // })
+                    reader.readAsDataURL(file);
+                }
+             })
    </script>
 </body>
 
