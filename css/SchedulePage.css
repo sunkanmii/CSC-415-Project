@@ -1,251 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 *{
-  margin: 0;
-  padding: 0; 
-  box-sizing: border-box;
+  font-family: 'Lato', sans-serif, 'Courier';
 }
-body{
-  background: #E5E5E5;
- }
-.wrapper .header{
-  position: absolute;
-  width: 177px;
-  height: 48px;
-  left: 320px;
-  top: 73px; 
-  font-family: Lato;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 40px;
-  line-height: 48px;
-  color: #000000;
-  margin: 0px 105px;
-  
+.p415-main-section{
+  display: grid;
+  width: 77%;
+  grid-template-columns: 100%;
+  grid-template-rows: minmax(2rem, 8rem) 1px minmax(5rem, auto);
+  padding-left: 5rem;
 }
-.cards{
-  position: absolute;
-  padding: 100px;
-  width: 100%;
+.p415-main-section #p415-schedule-head{
+  font-size: 2rem;
+  padding-top: 3rem;
+  margin-top: 0rem;
+  align-self: center;
+}
+.p415-main-section .p415-active-sessions{
+  padding-top: 1rem;
+  margin-top: 3rem;
   display: flex;
-  justify-content: space-between; 
   flex-wrap: wrap;
-  margin: 115px 300px;
+  width: 100%;
 }
-.cards .cards_inner .container{
-  position: relative;
-  width: 53px;
-  height: 24px;
-  background: #FFFFFF;
-  margin: 0px 0px;
-  border-radius: 100px;
-  align-content: center;
-  justify-content: center;
-}
-.cards .cards_inner .container .status{
-  text-align: center;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 13px;
-  line-height: 20px;
-}
-.cards_item::before{
-  
-  background: #E5E5E5;
-  position:absolute;
-  display:block;
-  content:'';
-  border-radius: 50%;
-  width: 211px;
-  height: 180px;
-  opacity: 0.24;
-  margin:-80px 180px; 
-}
-.cards .cards_item{
-  padding: 0px 0px;
-  width: 290px; 
-  height: 250px;
-}
-.cards .cards_inner{
-  background: #6E41E2;
-  width: 292px; 
-  height: 170px;
-  position: absolute;
-  left: 0px;
-  right: 0px;
-  top: 0px;
-  bottom: 0px;
-  background: #6E41E2;
-  border-radius: 8px;
-  padding: 21px 20px; 
-}
-.cards .cards_inner ion-icon{
-  position: relative;
-  width: 15px;
-  height: 14px;
-  left: 2px;
-  top: -60px;
-  color: #FFFFFF;
-  margin: 0px 3px;
-
-  }
-.cards .cards_inner .year{
-  position: static;
-  height: 28px;
-  left: 0px;
-  right: 0px;
-  top: 0px;
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 28px;
+.p415-active-sessions .p415-session-card{
   display: flex;
-  align-items: center;
-  color: #FFFFFF;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-  margin: 4px 5px
+  flex-wrap: wrap;
+  width: 9rem;
+  margin: 1rem 2rem 1rem 0rem;
+  height: 9rem;
+  color: white;
+  background-color: #6E41E2;
 }
-.cards .cards_inner .semester{
-  position: static;
-  height: 24px;
-  left: 0px;
-  right: 0px;
-  top: 32px;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 24px;
-  margin: 0px 5px;
-  color: #FFFFFF;
-  flex: none;
-  order: 1;
-  flex-grow: 0;
+.p415-session-card .p415-session-status{
+  
 }
-.cards .cards_inner .school{
-  position: static;
-  width: 211px;
-  left: 0px;
-  top: 0%;
-  bottom: 0%;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 24px;
-  color: #FFFFFF;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-  margin: 40px 58px;
-}
+.p415-session-card .p415-school-name{
 
-
-.header-sidebar{
-    display: flex;
-    width: 15rem;
-    position: fixed;
-    height: -webkit-fill-available;
-    overflow: scroll;
-    flex-wrap: wrap;
-    z-index: 2;
 }
-.header-sidebar span{
-    display: block;
-    position: absolute;
-}
-.side-bar-section{
-    display: flex;
-    position: absolute;
-    justify-content: center;
-    width: 100%;
-    height: auto;
-    flex-wrap: wrap;
-    top: 0;
-    left: -100%;
-    transition: 0.5s;
-    background: linear-gradient(175.67deg, #440A67 0%, #93329E 98%);
-}
-.side-bar-section .profile-image{
-    display: flex;
-    flex-wrap: wrap;
-    padding: 1.5rem 0rem;
-    justify-content: center;
-    width: 100%;
-    height: 10rem;
-    margin-bottom: 4rem;
-    position: relative;
-}
-.side-bar-section .profile-image img{
-    width: 95px;
-    height: 95px;
-}
-.side-bar-section .profile-image hr{
-    width: 10rem;
-    height: 1px;
-    margin-top: 0.5rem;
-    position: absolute;
-    bottom: 0;
-    left: 2.6rem;
-    border: 1px solid rgba(255, 255, 255, 0.56);
-    background-color: rgba(255, 255, 255, 0.56);
-}
-.side-bar-section .links-to-pages .page-link{
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-items: center;
-    margin-top: 1.5rem;
-}
-.side-bar-section .links-to-pages .page-link:nth-child(1){
-    margin-top: 0;
-}
-.side-bar-section .links-to-pages .page-link:nth-child(6){
-    margin-top: 11rem;
-    margin-bottom: 3rem;
-}
-.side-bar-section .links-to-pages .page-link p{
-    margin-left: 1rem;
-}
-.side-bar-section .links-to-pages .page-link a{
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 0.5rem;
-}
-.toggle-menu{
-    font-size: 24px;
-    cursor: pointer;
-    position: relative;
-    z-index: 2;
-    height: 4rem;
-    padding: 1rem;
-}
-/* Toggle menu */
-.header-sidebar #toggle-butt {
-    display: none;
-}
-.header-sidebar #toggle-butt:checked~.side-bar-section {
-    left: 0;
-}
-@media screen and (min-width: 60rem) {
-    .header-sidebar{
-        position: relative;
-        overflow: unset;
-        height: auto;
-    }
-    .header-sidebar .toggle-menu{
-        display: none;
-    }
-    .header-sidebar .side-bar-section{
-        left: 0;
-        width: 15rem;
-        position: relative;
-    }
+.fa-graduation-cap{
+  color: white;
 }
