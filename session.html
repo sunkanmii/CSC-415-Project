@@ -74,6 +74,61 @@
         <section class="p415-main-section">
             <h1 id="p415-schedule-head">Sessions</h1>
             <hr />
+
+            <form method="POST" class="p415-session-info">
+                <label for="p415-year">Input year</label>
+                <input id="p415-year" type="number" name="year" />
+
+                <label for="p415-semesters">Input Semester</label>
+                <select id="p415-semesters" name="semesters">
+                    <option value="1st Semester">1st Semester</option>
+                    <option value="1st Semester">2nd Semester</option>
+                </select>
+
+                <input type="submit" value="Add" />
+            </form>
+
+            <section class="p415-table-container">
+                <table class="p415-table">
+                    <tbody>
+                        <tr>
+                            <th>Year</th>
+                            <th>Session</th>
+                            <th>Status</th>
+                        </tr>
+                        <tr>
+                            <td>2020</td>
+                            <td>2020 first semester</td>
+                            <td>Active</td>
+                        </tr>
+                        <tr>
+                            <td>2020</td>
+                            <td>2020 second semester</td>
+                            <td>Inactive</td>
+                        </tr>
+                        <tr>
+                            <td>2019</td>
+                            <td>2019 first semester</td>
+                            <td>Inactive</td>
+                        </tr>
+                        <tr>
+                            <td>2019</td>
+                            <td>2019 first semester</td>
+                            <td>Inactive</td>
+                        </tr>
+                        <tr>
+                            <td>2018</td>
+                            <td>2018 first semester</td>
+                            <td>Inactive</td>
+                        </tr>
+                        <tr>
+                            <td>2018</td>
+                            <td>2018 first semester</td>
+                            <td>Inactive</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
         </section>
     </main>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
