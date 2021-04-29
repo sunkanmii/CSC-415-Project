@@ -5,7 +5,6 @@
     height: -webkit-fill-available;
     overflow: scroll;
     flex-wrap: wrap;
-    z-index: 2;
 }
 .header-sidebar span{
     display: block;
@@ -75,7 +74,7 @@
     font-size: 24px;
     cursor: pointer;
     position: relative;
-    z-index: 2;
+    z-index: 3;
     height: 4rem;
     padding: 1rem;
 }
@@ -85,6 +84,7 @@
 }
 .header-sidebar #toggle-butt:checked~.side-bar-section {
     left: 0;
+    z-index: 2;
 }
 
 @media screen and (min-width: 60rem) {
