@@ -1,0 +1,91 @@
+* {
+    font-family: 'Lato', sans-serif, 'Courier';
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.p415-main-section {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 100%;
+    grid-template-rows: minmax(2rem, 8rem) 1px minmax(5rem, auto);
+    padding-left: 2rem;
+}
+
+.p415-main-section #p415-schedule-head {
+    font-size: 2rem;
+    padding-top: 3rem;
+    margin-top: 0rem;
+    align-self: center;
+}
+
+.p415-main-section hr {
+    width: 80%;
+    border: none;
+    background-color: #D2D2D2;
+    border: 1px solid #D2D2D2;
+}
+
+.p415-main-section .p415-session-info{
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 1rem;
+    align-items: center;
+}
+.p415-main-section .p415-session-info label{
+    position: absolute;
+    visibility: hidden;
+}
+/* Disable scroll function for input number */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+.p415-session-info input[type="number"], .p415-session-info #p415-semesters{
+    display: inline-block;
+    padding-left: 1rem;
+    height: 2.1rem;
+    margin: 1rem 1rem;
+    border: none;
+    width: 10rem;
+    box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.04), 0px 4px 24px rgba(51, 51, 51, 0.24);
+}
+.p415-session-info input[type="number"], .p415-session-info #p415-semesters{
+    margin-left: 0;
+}
+.p415-session-info input[type="submit"]{
+    width: 7rem;
+    height: 2rem;
+    background-color: #10CD45;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgb(141 139 139 / 4%), 0px 4px 17px rgb(159 159 159 / 24%);
+}
+.p415-session-info #p415-semesters{
+    
+}
+.p415-main-section .p415-table-container{
+    
+}
+table, th, td {
+    border: 1px solid #D2D2D2;
+}
+table tr td:nth-child(n+2){
+    border-left: none;
+    border-right: none;
+}
+table tr td:nth-child(n+3){
+    border-right: none;
+}
+table{
+    border-bottom: none;
+    width: 100%;
+    border-collapse: separate;
+    text-align: left;
+    color: #878787;
+    border-spacing: 52px 0;
+}
