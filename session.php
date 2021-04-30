@@ -101,12 +101,12 @@
                         </div>
                         <div>
                             <p>Session</p>
-                            <p>2020 first semester</p>
-                            <p>2020 second semester</p>
-                            <p>2019 first semester</p>
-                            <p>2019 first semester</p>
-                            <p>2018 first semester</p>
-                            <p>2018 first semester</p>
+                            <p>2020 1st semester</p>
+                            <p>2020 2nd semester</p>
+                            <p>2019 1st semester</p>
+                            <p>2019 2nd semester</p>
+                            <p>2018 1st semester</p>
+                            <p>2018 2nd semester</p>
                         </div>
                         <div>
                             <p>Status</p>
