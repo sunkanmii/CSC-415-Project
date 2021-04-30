@@ -12,7 +12,7 @@
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" type="text/css" href="./css/index.css">
     <link rel="stylesheet" type="text/css" href="./css/sidebar.css">
-    <link rel="stylesheet" type="text/css" href="./css/SchedulePage.css">
+    <link rel="stylesheet" type="text/css" href="./css/session.css">
 </head>
 
 <body>
@@ -77,10 +77,10 @@
 
             <form method="POST" class="p415-session-info">
                 <label for="p415-year">Input year</label>
-                <input id="p415-year" type="number" name="year" />
+                <input id="p415-year" placeholder="YYYY" type="number" name="year" />
 
                 <label for="p415-semesters">Input Semester</label>
-                <select id="p415-semesters" name="semesters">
+                <select id="p415-semesters" placeholder="Semester" name="semesters">
                     <option value="1st Semester">1st Semester</option>
                     <option value="1st Semester">2nd Semester</option>
                 </select>
@@ -89,45 +89,35 @@
             </form>
 
             <section class="p415-table-container">
-                <table class="p415-table">
-                    <tbody>
-                        <tr>
-                            <th>Year</th>
-                            <th>Session</th>
-                            <th>Status</th>
-                        </tr>
-                        <tr>
-                            <td>2020</td>
-                            <td>2020 first semester</td>
-                            <td>Active</td>
-                        </tr>
-                        <tr>
-                            <td>2020</td>
-                            <td>2020 second semester</td>
-                            <td>Inactive</td>
-                        </tr>
-                        <tr>
-                            <td>2019</td>
-                            <td>2019 first semester</td>
-                            <td>Inactive</td>
-                        </tr>
-                        <tr>
-                            <td>2019</td>
-                            <td>2019 first semester</td>
-                            <td>Inactive</td>
-                        </tr>
-                        <tr>
-                            <td>2018</td>
-                            <td>2018 first semester</td>
-                            <td>Inactive</td>
-                        </tr>
-                        <tr>
-                            <td>2018</td>
-                            <td>2018 first semester</td>
-                            <td>Inactive</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <section class="p415-table">
+                        <div>
+                            <p>Year</p>
+                            <p>2020</p>
+                            <p>2020</p>
+                            <p>2019</p>
+                            <p>2019</p>
+                            <p>2018</p>
+                            <p>2018</p>
+                        </div>
+                        <div>
+                            <p>Session</p>
+                            <p>2020 first semester</p>
+                            <p>2020 second semester</p>
+                            <p>2019 first semester</p>
+                            <p>2019 first semester</p>
+                            <p>2018 first semester</p>
+                            <p>2018 first semester</p>
+                        </div>
+                        <div>
+                            <p>Status</p>
+                            <p>Active</p>
+                            <p>Inactive</p>
+                            <p>Inactive</p>
+                            <p>Inactive</p>
+                            <p>Inactive</p>
+                            <p>Inactive</p>
+                        </div>
+                    </section>
             </section>
         </section>
     </main>
