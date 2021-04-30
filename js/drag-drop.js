@@ -94,4 +94,5 @@ function uploadFile(file, i) {
     
       formData.append('file', file)
       xhr.send(formData)
+
 }
