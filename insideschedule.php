@@ -1,16 +1,16 @@
 <?php
 
-    // if(session_status() == PHP_SESSION_NONE){
-    //     //session has not started
-    //     session_start();
-    // }
+     if(session_status() == PHP_SESSION_NONE){
+         //session has not started
+         session_start();
+    }
     
-    // if ( !isset($_SESSION['user-matric'])) {
-    //     header("Location: login.php");
+     if ( !isset($_SESSION['user-matric'])) {
+         header("Location: login.php");
     
-    // } elseif ($_SESSION['user-matric'] !=160805007) {
-    //     header("Location: login.php");
-    // }
+     } elseif ($_SESSION['user-matric'] !=160805007) {
+         header("Location: login.php");
+     }
 
 ?>
 
@@ -93,7 +93,7 @@
                         <div class="round-container">
                             <h3><bold>Active</bold></h3>
                         </div>
-                        <h3>2020</h3>
+                        <h3>2020 1st</h3>
                         <h3>Session</h3>
                     </div>
             </div>
@@ -158,7 +158,7 @@
                         <th>stu/day</th>
                       </tr>
                       <tr>
-                        <td>2020</td>
+                        <td>2020 1st semester</td>
                         <td>8/23/20</td>
                         <td>9/23/20</td>
                         <td>monday</td>
@@ -168,7 +168,7 @@
                         <td>delete</td>
                       </tr>
                       <tr>
-                        <td>2020</td>
+                        <td>2020 1st semester</td>
                         <td>7/20/20</td>
                         <td>8/21/20</td>
                         <td>friday</td>
@@ -178,7 +178,7 @@
                         <td>delete</td>
                       </tr>
                       <tr>
-                        <td>2020</td>
+                        <td>2020 1st semester</td>
                         <td>5/20/20</td>
                         <td>6/21/20</td>
                         <td>tuesday</td>
