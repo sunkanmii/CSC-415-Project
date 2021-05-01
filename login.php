@@ -118,7 +118,6 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
         </section>
         <img src="./imgs/5972-1.svg" alt="" />
     </main>
-    <script src="main.js"></script>
 </body>
 
 </html>
