@@ -35,60 +35,9 @@
 
 <body>
   <main>
-    <section class="header-sidebar">
-      <input type="checkbox" id="toggle-butt" />
-
-      <label for="toggle-butt" class="toggle-menu">
-        <i class="fa fa-bars" aria-hidden="true"></i>
-      </label>
-
-      <section class="side-bar-section">
-        <div class="profile-image">
-          <img src="./imgs/demo.png" alt="profile" />
-          <hr />
-        </div>
-
-        <div class="links-to-pages">
-          <div class="page-link">
-            <a href="./index.php">
-              <img src="./imgs/appointment.svg" alt="">
-              <p>Appointments</p>
-            </a>
-          </div>
-          <div class="page-link">
-            <a href="./schedules.php">
-              <img src="./imgs/schedules.svg" alt="">
-              <p>Schedules</p>
-            </a>
-          </div>
-          <div class="page-link">
-            <a href="/">
-              <img src="./imgs/sessions.svg" alt="">
-              <p>Sessions</p>
-            </a>
-          </div>
-          <div class="page-link">
-            <a href="/">
-              <img src="./imgs/mail.svg" alt="">
-              <p>Message</p>
-            </a>
-          </div>
-          <div class="page-link">
-            <a href="/">
-              <img src="./imgs/admin.svg" alt="">
-              <p>Admin</p>
-            </a>
-          </div>
-          <div class="page-link">
-            <a href="/">
-              <img src="./imgs/logout.svg" alt="">
-              <p>Logout</p>
-            </a>
-          </div>
-        </div>
-      </section>
-    </section>
-
+    <?php
+        include "./sidebar.php";
+    ?>
     <section class="p415-main-section">
       <h1 id="p415-schedule-head">Schedules</h1>
       <hr />
@@ -96,7 +45,7 @@
       <section class="p415-active-sessions">
         <div class="p415-session-card">
           <p class="p415-session-status">Active</p>
-          <time datetime="2020" class="p415-session-year">2020</time>
+          <time datetime="2020" class="p415-session-year">2020 1st</time>
           <p class="p415-session">Session</p>
           <section class="p415-school-name">
             <i class="fas fa-graduation-cap"></i>
@@ -106,7 +55,7 @@
 
         <div class="p415-session-card">
           <p class="p415-session-status">Inactive</p>
-          <time datetime="2019" class="p415-session-year">2019</time>
+          <time datetime="2019" class="p415-session-year">2020 2nd</time>
           <p>Session</p>
           <section class="p415-school-name">
             <i class="fas fa-graduation-cap"></i>
@@ -116,7 +65,7 @@
 
         <div class="p415-session-card">
           <p class="p415-session-status">Inactive</p>
-          <time datetime="2018" class="p415-session-year">2018</time>
+          <time datetime="2018" class="p415-session-year">2018 1st</time>
           <p>Session</p>
           <section class="p415-school-name">
             <i class="fas fa-graduation-cap"></i>
@@ -126,7 +75,7 @@
 
         <div class="p415-session-card">
           <p class="p415-session-status">Inactive</p>
-          <time datetime="2017" class="p415-session-year">2017</time>
+          <time datetime="2017" class="p415-session-year">2017 2nd</time>
           <p>Session</p>
           <section class="p415-school-name">
             <i class="fas fa-graduation-cap"></i>

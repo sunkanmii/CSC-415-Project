@@ -1,3 +1,7 @@
+:root{
+    --grey: #D2D2D2;
+    --lightblack: rgba(0, 0, 0, 0.5);
+}
 * {
     font-family: 'Lato', sans-serif, 'Courier';
     padding: 0;
@@ -21,10 +25,10 @@
 }
 
 .p415-main-section hr {
-    width: 80%;
+    width: 95%;
     border: none;
-    background-color: #D2D2D2;
-    border: 1px solid #D2D2D2;
+    background-color: var(--grey);
+    border: 1px solid var(--grey);
 }
 
 .p415-main-section .p415-session-info{
@@ -32,6 +36,7 @@
     display: flex;
     flex-wrap: wrap;
     min-height: 1rem;
+    justify-content: center;
     align-items: center;
 }
 .p415-main-section .p415-session-info label{
@@ -62,30 +67,48 @@ input[type=number]::-webkit-outer-spin-button {
     background-color: #10CD45;
     border: none;
     color: white;
+    margin-top: 1rem;
     border-radius: 10px;
     box-shadow: 0px 4px 4px rgb(141 139 139 / 4%), 0px 4px 17px rgb(159 159 159 / 24%);
 }
-.p415-session-info #p415-semesters{
-    
-}
 .p415-main-section .p415-table-container{
-    
-}
-table, th, td {
-    border: 1px solid #D2D2D2;
-}
-table tr td:nth-child(n+2){
-    border-left: none;
-    border-right: none;
-}
-table tr td:nth-child(n+3){
-    border-right: none;
-}
-table{
-    border-bottom: none;
     width: 100%;
-    border-collapse: separate;
-    text-align: left;
-    color: #878787;
-    border-spacing: 52px 0;
+    margin-top: 6rem;
+}
+.p415-table{
+    display: flex;
+    border: 1px solid var(--grey);
+    width: 95%;
+}
+.p415-table div{
+    display: flex;
+    flex-wrap: wrap;
+    width: 30%;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.p415-table div p {
+    border-bottom: 1px solid var(--grey);
+    width: 80%;
+    font-size: 0.85rem;
+    color: black;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+}
+.p415-table div p:nth-child(1) {
+    color: var(--lightblack);
+    font-size: 0.95rem;
+}
+.p415-table div:nth-child(2){
+    justify-content: center;
+}
+.p415-table div:nth-child(3){
+    justify-content: flex-end;
+    width: 30%;
+}
+
+@media screen and (min-width: 40rem){
+    .p415-session-info input[type="submit"]{
+        margin: 0;
+    }
 }
