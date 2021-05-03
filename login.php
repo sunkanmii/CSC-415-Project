@@ -3,6 +3,10 @@
 if(session_status() == PHP_SESSION_NONE){
     //session has not started
     session_start();
+}else {
+    session_destroy();
+    //start it again
+    session_start();
 }
 
 if ( isset($_SESSION['success_msg'])) {
@@ -13,6 +17,7 @@ if ( isset($_SESSION['success_msg'])) {
     //start it again
     session_start();
 }
+
 
 
 $errormsg ="";
