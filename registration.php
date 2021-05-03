@@ -63,8 +63,8 @@ if ($errormsg != "") {
         } 
         else {
             $insertUsr = "INSERT INTO `dbnh41dWFL`.`users` 
-                          (`student_matricno`,`student_name`,`student_email`,`student_department`,`student_course_name`,`session`,`student_image`,`student_password`)
-                          VALUES ('".$matric."','".$full_name."','".$email."',null,null,null,'".$profile_pic."','".$password."')
+                          (`student_matricno`,`student_name`,`student_email`,`student_department`,`student_course_name`,`session`,`student_password`,`student_img_url`)
+                          VALUES ('".$matric."','".$full_name."','".$email."',null,null,null,'".$password."','".$profile_pic."')
                             ";
 
             if ($result = mysqli_query($conn,$insertUsr)) {

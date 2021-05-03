@@ -1,3 +1,43 @@
+<?php 
+
+
+if(session_status() == PHP_SESSION_NONE){
+    //session has not started
+    session_start();
+}
+
+if ( !isset($_SESSION['user-matric'])) {
+    header("Location: login.php");
+
+}
+
+include 'connect.php';
+
+$matric = $_SESSION['user-matric'];
+
+$name = "";
+$profilepic = null;
+
+$usr = "SELECT * 
+        FROM     `dbnh41dWFL`.`users`
+        WHERE   student_matricno = '".$matric."'
+        ";
+
+if ($result = mysqli_query($conn,$usr)) {
+    
+    $usr_row = mysqli_fetch_array($result);
+
+  //  $name = $usr_row['student_name'];
+    $profilepic = $usr_row['student_img_url'];
+    
+  //  echo $profilepic;
+    
+}
+
+
+?>
+
+
 <section class="header-sidebar">
     <input type="checkbox" id="toggle-butt" />
 
@@ -7,7 +47,7 @@
 
     <section class="side-bar-section">
         <div class="profile-image">
-            <img src="./imgs/demo.png" alt="profile" />
+            <img src=<?php echo $profilepic ?> alt="profile" />
             <hr />
         </div>
 
