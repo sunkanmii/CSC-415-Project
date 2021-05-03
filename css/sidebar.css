@@ -35,6 +35,7 @@
 .side-bar-section .profile-image img{
     width: 95px;
     height: 95px;
+    border-radius: 10rem;
 }
 .side-bar-section .profile-image hr{
     width: 10rem;
