@@ -25,7 +25,7 @@
                 </a>
             </div>
             <div class="page-link">
-                <a href="/">
+                <a href="./session.php">
                     <img src="./imgs/sessions.svg" alt="">
                     <p>Sessions</p>
                 </a>

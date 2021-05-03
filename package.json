@@ -1,0 +1,29 @@
+{
+  "name": "group-project",
+  "version": "1.0.0",
+  "description": "Supervisor Appointment Management System",
+  "main": "drag-drop.js",
+  "dependencies": {
+    "mysql": "^2.18.1",
+    "uniq": "^1.0.1"
+  },
+  "devDependencies": {
+    "@webpack-cli/generators": "^2.0.0",
+    "webpack": "^5.36.2",
+    "webpack-cli": "^4.6.0"
+  },
+  "scripts": {
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sunkanmii/CSC-415-Project.git"
+  },
+  "author": "Fafowora Olasunkanmi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sunkanmii/CSC-415-Project/issues"
+  },
+  "homepage": "https://github.com/sunkanmii/CSC-415-Project#readme"
+}
