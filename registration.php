@@ -1,4 +1,3 @@
-
 <?php 
 
 if(session_status() == PHP_SESSION_NONE){
@@ -42,7 +41,7 @@ if ($errormsg != "") {
     $errormsg = '<h6 class="alert-danger" >'.$errormsg.'</h6>';
 } else{
         $full_name = $_POST['name'];
-        $profile_pic =  $_POST['profilepics'];
+        $profile_pic =  $_COOKIE['profilePic'];
         
         $email = $_POST['new-email'];
         $matric = $_POST['matric-no'];
@@ -111,7 +110,7 @@ if ($errormsg != "") {
 <body>
     <main>
         <section class="p415-login-container">
-           
+
             <section class="p415-login-card">
                 <section> <?php echo $errormsg ?></section>
                 <h1>Profile</h1>
@@ -129,16 +128,18 @@ if ($errormsg != "") {
                     <section id="drop-area">
                         <section class="drag-drop-section">
                             <p>
-                                <span>Profile picture</span> 
-                            <span id ="small-text">PNG, jpg up to 10 MB</span>
+                                <span>Profile picture</span>
+                                <span id="small-text">PNG, jpg up to 10 MB</span>
                             </p>
-                            <label class="button-for-file" for="fileElem">Select<span class="spandrg"> or drag in form</span></label>
-                            <input type="file" id="fileElem"  accept="image/*" name="profilepics" required onchange="handleFiles(this.files)"/>
-                            
+                            <label class="button-for-file" for="fileElem">Select<span class="spandrg"> or drag in
+                                    form</span></label>
+                            <input type="file" id="fileElem" accept="image/*" name="profilepics" required />
+
                             <section class="img_preview_container" id="preview_img_con">
                                 <img src="imgs/profileavatar.png" alt="" class="image_preview_img">
-                            <!--    <span class="img_preview_txt"> image preview</span> -->
-                             </section>                     </section>
+                                <!--    <span class="img_preview_txt"> image preview</span> -->
+                            </section>
+                        </section>
                         <progress id="progress-bar" max=100 value=0></progress>
                         <p id="p415-display-message"></p>
                     </section>
@@ -172,28 +173,27 @@ if ($errormsg != "") {
         </section>
         <img class="p415-float-right" src="./imgs/8401-1.svg" alt="" />
     </main>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous"></script> -->
+
+    <script>
+        const input_img = document.getElementById('fileElem');
+        const preview_container = document.getElementById('preview_img_con');
+        const previewimg = preview_container.querySelector('.image_preview_img');
+
+        input_img.addEventListener("change", function () {
+            const file = this.files[0];
+
+            if (file) {
+                const reader = new FileReader();
+
+                reader.addEventListener("load", function () {
+                    previewimg.setAttribute("src", this.result);
+                });
+
+                reader.readAsDataURL(file);
+            }
+        })
+    </script>
     <script src="./js/drag-drop.js"></script>
-
-   <script>
-            const input_img = document.getElementById('fileElem');
-            const preview_container = document.getElementById('preview_img_con');
-             const previewimg = preview_container.querySelector('.image_preview_img');
-
-             input_img.addEventListener("change", function(){
-                 const file = this.files[0];
-
-                 if (file) {
-                     const reader = new FileReader();
-
-                     reader.addEventListener("load",function(){
-                         previewimg.setAttribute("src",this.result);
-                     });
-
-                    reader.readAsDataURL(file);
-                }
-             })
-   </script>
 </body>
 
 </html>
