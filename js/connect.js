@@ -1,4 +1,3 @@
-let mysql = require('mysql');
 
 let con = mysql.createConnection({
     host: 'remotemysql.com',
@@ -10,3 +9,7 @@ con.connect((err) => {
     if(err) throw err;
     console.log("Connected!");
 })
+
+let connect = con;
+
+export default connect = con;
