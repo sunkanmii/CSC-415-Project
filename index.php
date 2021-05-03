@@ -10,6 +10,9 @@ if ( !isset($_SESSION['user-matric'])) {
     header("Location: login.php");
 
 }
+if ($_SESSION['user-matric'] =160805007) {
+    header("Location: dashboard.php");
+}
 
 include 'connect.php';
 
