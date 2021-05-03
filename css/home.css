@@ -49,6 +49,7 @@ nav ul li a {
 nav ul li img {
     width: 90px;
     height: 90px;
+    border-radius: 10rem;
 }
 
 .p415-upperheader {
