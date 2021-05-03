@@ -35,6 +35,7 @@ main .main-page{
 .main-page .appointment-header .create-new-row span img{
     width: 26px;
     height: 7.25px;
+    border-radius: 20rem;
 }
 .main-page .appointment-header .create-new-row button{
     background-color: #10CD45;
