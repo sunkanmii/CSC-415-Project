@@ -1,12 +1,25 @@
 
 const getSlotValue = document.querySelector("#slots");
 const getSlotSuffix = document.querySelector("#slots-suffix");
+const getAllElementsInDropDown = document.querySelectorAll(".dropdown-content a");
+const dropDownText = document.querySelector(".dropbtn");
+const caretDown = document.querySelector("fa fa-caret-down");
 
 // Dropdown for home page.
 function showDropDown() {
     document.getElementById("myDropdown").classList.toggle("show");
 }
 
+function displayDate(){
+    for(let i = 0; i < getAllElementsInDropDown.length; i++){
+        getAllElementsInDropDown[i].addEventListener('click', () => {
+            dropDownText.innerHTML = getAllElementsInDropDown[i].textContent + "<i class='fa fa-caret-down'></i>"; 
+        })
+    }
+}
+if(getAllElementsInDropDown != null){
+    displayDate();
+}
 // Close the dropdown if the user clicks outside of it
 window.onclick = function (e) {
     if (!e.target.matches('.dropbtn')) {
@@ -26,4 +39,41 @@ function changeSuffix(){
         getSlotSuffix.textContent = "Slot left";
     }
 }
-changeSuffix();
+if(getSlotValue != null){
+    changeSuffix();
+}
+
+
+
+function post_select_Date(){
+   
+    for(let i = 0; i < getAllElementsInDropDown.length; i++){
+        getAllElementsInDropDown[i].addEventListener('click', () => {
+             var selected_dte = getAllElementsInDropDown[i].textContent; 
+
+             /*
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    console.log(this.responseText);
+                }
+                };
+                xmlhttp.open("GET", "index.php?dte=" + selected_dte, true);
+                xmlhttp.send(); */
+
+              
+
+
+
+
+
+        })
+    }
+
+    
+}
+
+post_select_Date();
+
+
+//document.getElementsByClassName('dropbtn')[0].innerText

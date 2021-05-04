@@ -10,7 +10,7 @@ if ( !isset($_SESSION['user-matric'])) {
     header("Location: login.php");
 
 }
-if ($_SESSION['user-matric'] !=160805007) {
+elseif ($_SESSION['user-matric'] !=160805007) {
     header("Location: login.php");
 }
 
