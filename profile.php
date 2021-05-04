@@ -59,18 +59,18 @@ if ($result = mysqli_query($conn,$usr)) {
                 <li><a href="./">home</a></li>
                 <li class="active"><a href="./">profile</a></li>
                 <li><a href="./">logout</a></li>
-                <li><a href="./"><img src="" alt="profile"></a></li>
+                <li><a href="./"><img src="/imgs/profile.png" alt="profile"></a></li>
             </ul>
         </nav>
         <section class="p415-profile-upperheader">
             <p>Profile</p>
             <p id="p415-user-matric">160805009</p>
-            <hr/>
+            <hr />
         </section>
 
         <section class="p415-profile-mid-section">
             <section class="p415-profile-details">
-                <img src="" alt="profile" />
+                <img src="./imgs/profile.png" alt="profile" />
                 <hr>
                 <h1 id="p415-username">Natasha Laurel</h1>
                 <p id="p415-email">mathiasjr007@gmail.com</p>
@@ -83,42 +83,45 @@ if ($result = mysqli_query($conn,$usr)) {
                     <label for="p415-new-name">Name</label>
                     <input id="p415-new-name" type="text" placeholder="Name" name="name" required autocomplete="name" />
                     <label for="p415-new-email">Email</label>
-                    <input id="p415-new-email" type="email" placeholder="Email" name="email" required autocomplete="email" />
+                    <input id="p415-new-email" type="email" placeholder="Email" name="email" required
+                        autocomplete="email" />
                     <label for="p415-new-department">Department</label>
-                    <input id="p415-new-department" type="text" placeholder="Department" name="department" required/>
+                    <input id="p415-new-department" type="text" placeholder="Department" name="department" required />
                     <label for="p415-new-course">Course</label>
-                    <input id="p415-new-course" type="text" placeholder="Course" name="course" required/>
-                    <input type="submit" value="Update"/>
+                    <input id="p415-new-course" type="text" placeholder="Course" name="course" required />
+                    <input type="submit" value="Update" />
                 </form>
             </section>
         </section>
 
         <section class="p415-profile-bottom-section">
             <table>
-                <tr>
-                    <th>AppointmentID</th>
-                    <th>Message</th>
-                    <th>Appointment</th>
-                    <th>Status</th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>hello sir my name is...</td>
-                    <td>9/23/16 5:30pm - 6:30pm</td>
-                    <td><span class="p415-work-status-update-green">Completed</span></td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>I would like to know more...</td>
-                    <td>8/21/15 2:00pm - 4:00pm</td>
-                    <td><span class="p415-work-status-update-green">Pending</span></td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>do I have to bring my log...</td>
-                    <td>5/19/12 1:30pm - 3:00pm</td>
-                    <td><span class="p415-work-status-update-green">Cancelled</span></td>
-                </tr>
+                <tbody>
+                    <tr>
+                        <th>AppointmentID</th>
+                        <th>Message</th>
+                        <th>Appointment</th>
+                        <th>Status</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>hello sir my name is...</td>
+                        <td>9/23/16 5:30pm - 6:30pm</td>
+                        <td><span class="p415-work-status-update-green">Completed</span></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>I would like to know more...</td>
+                        <td>8/21/15 2:00pm - 4:00pm</td>
+                        <td><span class="p415-work-status-update-green">Pending</span></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>do I have to bring my log...</td>
+                        <td>5/19/12 1:30pm - 3:00pm</td>
+                        <td><span class="p415-work-status-update-green">Cancelled</span></td>
+                    </tr>
+                </tbody>
             </table>
         </section>
 
