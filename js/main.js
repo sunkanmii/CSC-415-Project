@@ -44,4 +44,36 @@ if(getSlotValue != null){
 }
 
 
+
+function post_select_Date(){
+   
+    for(let i = 0; i < getAllElementsInDropDown.length; i++){
+        getAllElementsInDropDown[i].addEventListener('click', () => {
+             var selected_dte = getAllElementsInDropDown[i].textContent; 
+
+             /*
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    console.log(this.responseText);
+                }
+                };
+                xmlhttp.open("GET", "index.php?dte=" + selected_dte, true);
+                xmlhttp.send(); */
+
+              
+
+
+
+
+
+        })
+    }
+
+    
+}
+
+post_select_Date();
+
+
 //document.getElementsByClassName('dropbtn')[0].innerText
