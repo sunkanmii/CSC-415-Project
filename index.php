@@ -32,6 +32,9 @@ if ($result = mysqli_query($conn,$usr)) {
     
   //  echo $profilepic;
 }
+
+//$dte = "";
+//$dte =  $_REQUEST['dte'];
 ?>
 
 <!DOCTYPE html>
