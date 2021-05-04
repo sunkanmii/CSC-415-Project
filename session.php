@@ -1,5 +1,14 @@
 <?php
 include "connect.php";
+
+if(session_status() == PHP_SESSION_NONE){
+    //session has not started
+    session_start();
+} else {
+    session_destroy();
+    //then
+    session_start();
+}
 ?>
 
 <!DOCTYPE html>
@@ -45,7 +54,7 @@ include "connect.php";
              if(isset($_POST['submit'])){
                 $year = $_POST['year'];
                 $session=$_POST['semester'];
-                $status = 'active';
+                $status = 'inactive';
                 $insert = "INSERT INTO `dbnh41dWFL`.`session` 
                           (`session`,`year`,`status`)
                           VALUES ('".$year.' '.$session."','".$year."','".$status."')
@@ -70,6 +79,7 @@ include "connect.php";
                 $sql = "Select * from `dbnh41dWFL`.`session`";
                 $result = mysqli_query($conn,$sql);
                 while($res = mysqli_fetch_array($result)){
+                    $_SESSION['year'].= $res['year'];
                     echo '<p>'.$res['year'].'</p>';
                 }
                 ?>
@@ -80,6 +90,7 @@ include "connect.php";
                 $sql = "Select * from `dbnh41dWFL`.`session`";
                 $result = mysqli_query($conn,$sql);
                 while($res = mysqli_fetch_array($result)){
+                    $_SESSION['session'].= $res['session'];
                     echo '<p>'.$res['session'].'</p>';
                 }
                 ?>
@@ -90,6 +101,7 @@ include "connect.php";
                 $sql = "Select * from `dbnh41dWFL`.`session`";
                 $result = mysqli_query($conn,$sql);
                 while($res = mysqli_fetch_array($result)){
+                    $_SESSION['status'].= $res['status'];
                     echo '<p>'.$res['status'].'</p>';
                 }
                 ?>

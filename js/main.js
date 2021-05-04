@@ -17,7 +17,9 @@ function displayDate(){
         })
     }
 }
-displayDate();
+if(getAllElementsInDropDown != null){
+    displayDate();
+}
 // Close the dropdown if the user clicks outside of it
 window.onclick = function (e) {
     if (!e.target.matches('.dropbtn')) {
@@ -37,7 +39,9 @@ function changeSuffix(){
         getSlotSuffix.textContent = "Slot left";
     }
 }
-changeSuffix();
+if(getSlotValue != null){
+    changeSuffix();
+}
 
 
 

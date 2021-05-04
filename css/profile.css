@@ -53,7 +53,7 @@ hr{
     width: 100%;
 }
 .p415-profile-mid-section .p415-profile-details img{
-    width: 324px;
+    width: 80%;
     text-align: center;
     height: auto;
     margin-bottom: 1rem;
@@ -62,6 +62,9 @@ hr{
 .p415-profile-mid-section .p415-profile-details h1{
     font-size: 2rem;
     margin-bottom: 1rem;
+}
+.p415-profile-mid-section #p415-email{
+    text-decoration: underline;
 }
 .p415-profile-form-section{
     position: relative;
@@ -121,7 +124,6 @@ label{
     align-items: center;
     width: 100%;
     min-height: 19rem;
-    overflow-x: scroll;
     box-shadow: inset 0px -4px 10px -3px rgba(0, 0, 0, 0.25);
     border-radius: 17px;
 }
@@ -142,8 +144,12 @@ table{
 }
 .p415-profile-bottom-section table tbody{
     width: auto;
+    overflow-x: scroll;
 }
 @media screen and (min-width: 40rem){
+    .p415-profile-mid-section .p415-profile-details img{
+        width: 324px;
+    }
     .p415-profile-mid-section{
         flex-wrap: nowrap;
     }
