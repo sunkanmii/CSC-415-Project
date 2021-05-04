@@ -90,6 +90,7 @@ label{
     border-radius: 14px;
     margin: 1rem 0;
     margin-right: 1.5rem;
+    cursor: pointer;
     justify-self: end;
     border: none;
     padding: 1rem 0;
