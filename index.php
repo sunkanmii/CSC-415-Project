@@ -10,9 +10,6 @@ if ( !isset($_SESSION['user-matric'])) {
     header("Location: login.php");
 
 }
-elseif ($_SESSION['user-matric'] == 160805007) {
-    header("Location: dashboard.php");
-}
 
 include 'connect.php';
 
@@ -34,12 +31,7 @@ if ($result = mysqli_query($conn,$usr)) {
     $profilepic = $usr_row['student_img_url'];
     
   //  echo $profilepic;
-    
-
-
 }
-
-
 ?>
 
 <!DOCTYPE html>
@@ -65,6 +57,7 @@ if ($result = mysqli_query($conn,$usr)) {
             <ul>
                 <li class="active"><a href="./">home</a></li>
                 <li><a href="./">profile</a></li>
+                <li><a href="./">logout</a></li>
                 <li><a href="./"><img src=<?php echo $profilepic ?> alt="profile"></a></li>
             </ul>
         </nav>
