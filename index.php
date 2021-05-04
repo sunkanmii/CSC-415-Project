@@ -11,7 +11,6 @@ if ( !isset($_SESSION['user-matric'])) {
 
 }
 
-
 include 'connect.php';
 
 $matric = $_SESSION['user-matric'];
@@ -32,12 +31,7 @@ if ($result = mysqli_query($conn,$usr)) {
     $profilepic = $usr_row['student_img_url'];
     
   //  echo $profilepic;
-    
-
-
 }
-
-
 ?>
 
 <!DOCTYPE html>
@@ -63,6 +57,7 @@ if ($result = mysqli_query($conn,$usr)) {
             <ul>
                 <li class="active"><a href="./">home</a></li>
                 <li><a href="./">profile</a></li>
+                <li><a href="./">logout</a></li>
                 <li><a href="./"><img src=<?php echo $profilepic ?> alt="profile"></a></li>
             </ul>
         </nav>
