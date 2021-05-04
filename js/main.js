@@ -38,3 +38,6 @@ function changeSuffix(){
     }
 }
 changeSuffix();
+
+
+//document.getElementsByClassName('dropbtn')[0].innerText
