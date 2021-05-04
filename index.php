@@ -140,6 +140,8 @@ if ($result = mysqli_query($conn,$usr)) {
         <p>Coyright <span id="copy-year">2021</span> &copy; appointmentunilag.com All rights reserved.</p>
     </footer>
     <script src='./js/main.js'></script>
+
+ 
 </body>
 
 </html>
