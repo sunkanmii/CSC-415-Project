@@ -1,5 +1,5 @@
 <?php
-
+include "connect.php";
     if(session_status() == PHP_SESSION_NONE){
         //session has not started
         session_start();
@@ -41,11 +41,19 @@
     <section class="p415-main-section">
       <h1 id="p415-schedule-head">Schedules</h1>
       <hr />
-
+     
+      <?php 
+      $sql = "Select * from `dbnh41dWFL`.`session`";
+      $result = mysqli_query($conn,$sql);
+      while($row = mysqli_fetch_array($result))
+      {
+        ?>
       <section class="p415-active-sessions">
         <div class="p415-session-card">
-          <p class="p415-session-status">Active</p>
-          <time datetime="2020" class="p415-session-year">2020 1st</time>
+          <p class="p415-session-status"><?php echo $row['status']?></p>
+          
+          <time datetime="2020" class="p415-session-year"><?php echo $row['session']?></time>
+          
           <p class="p415-session">Session</p>
           <section class="p415-school-name">
             <i class="fas fa-graduation-cap"></i>
@@ -53,46 +61,13 @@
           </section>
         </div>
 
-        <div class="p415-session-card">
-          <p class="p415-session-status">Inactive</p>
-          <time datetime="2019" class="p415-session-year">2020 2nd</time>
-          <p>Session</p>
-          <section class="p415-school-name">
-            <i class="fas fa-graduation-cap"></i>
-            <p>University of Lagos</p>
-          </section>
-        </div>
-
-        <div class="p415-session-card">
-          <p class="p415-session-status">Inactive</p>
-          <time datetime="2018" class="p415-session-year">2018 1st</time>
-          <p>Session</p>
-          <section class="p415-school-name">
-            <i class="fas fa-graduation-cap"></i>
-            <p>University of Lagos</p>
-          </section>
-        </div>
-
-        <div class="p415-session-card">
-          <p class="p415-session-status">Inactive</p>
-          <time datetime="2017" class="p415-session-year">2017 2nd</time>
-          <p>Session</p>
-          <section class="p415-school-name">
-            <i class="fas fa-graduation-cap"></i>
-            <p>University of Lagos</p>
-          </section>
-        </div>
-
-        <div class="p415-session-card">
-          <p class="p415-session-status">Inactive</p>
-          <time datetime="2016" class="p415-session-year">2016</time>
-          <p>Session</p>
-          <section class="p415-school-name">
-            <i class="fas fa-graduation-cap"></i>
-            <p>University of Lagos</p>
           </section>
         </div>
       </section>
+      <?php
+      }
+?>
+  
     </section>
   </main>
   <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
