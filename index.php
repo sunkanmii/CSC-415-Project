@@ -81,9 +81,9 @@ if ($result = mysqli_query($conn,$usr)) {
                     <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content" id="myDropdown">
-                    <a href="#">Date 1</a>
-                    <a href="#">Date 2</a>
-                    <a href="#">Date 3</a>
+                    <a>Date 1</a>
+                    <a>Date 2</a>
+                    <a>Date 3</a>
                 </div>
             </div>
             <div class="p415-slot-section">

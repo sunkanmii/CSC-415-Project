@@ -49,6 +49,7 @@ if ($result = mysqli_query($conn,$usr)) {
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel='stylesheet' type='text/css' media='screen' href='./css/index.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='./css/home.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/profile.css'>
 </head>
 
 <body>
@@ -61,21 +62,23 @@ if ($result = mysqli_query($conn,$usr)) {
                 <li><a href="./"><img src="" alt="profile"></a></li>
             </ul>
         </nav>
-        <section class="p415-upperheader">
+        <section class="p415-profile-upperheader">
             <p>Profile</p>
             <p id="p415-user-matric">160805009</p>
+            <hr/>
         </section>
 
-        <section class="p415-mid-section">
-            <section>
+        <section class="p415-profile-mid-section">
+            <section class="p415-profile-details">
                 <img src="" alt="profile" />
                 <hr>
                 <h1 id="p415-username">Natasha Laurel</h1>
-                <p id="p415-email">Computer Sciences</p>
+                <p id="p415-email">mathiasjr007@gmail.com</p>
+                <p id="p415-course">Computer Sciences</p>
                 <p id="p415-course-code">CSC 415</p>
             </section>
 
-            <section>
+            <section class="p415-profile-form-section">
                 <form method="POST">
                     <label for="p415-new-name">Name</label>
                     <input id="p415-new-name" type="text" placeholder="Name" name="name" required autocomplete="name" />
@@ -90,7 +93,7 @@ if ($result = mysqli_query($conn,$usr)) {
             </section>
         </section>
 
-        <section class="p415-bottom-section">
+        <section class="p415-profile-bottom-section">
             <table>
                 <tr>
                     <th>AppointmentID</th>
