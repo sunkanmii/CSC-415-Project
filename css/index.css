@@ -38,3 +38,19 @@ main{
 ul li{
     list-style-type: none;
 }
+
+.alert-success{
+    color: white;
+    background-color: #4BB453;
+    border-radius: 4%;
+    font-style: normal;
+    font-size: 0.9rem;
+    margin-top: 2px;
+    text-align: center;
+    padding: 5px;
+    font-weight: normal;
+    display: block;
+    position: unset;
+    top: 0px;
+    
+}

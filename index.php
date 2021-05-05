@@ -10,6 +10,12 @@ if ( !isset($_SESSION['user-matric'])) {
     header("Location: login.php");
 }
 
+if ( isset( $_SESSION['sucess_app'])) {
+   echo $_SESSION['sucess_app'];
+
+   unset($_SESSION['sucess_app']);
+}
+
 include 'connect.php';
 
 $matric = $_SESSION['user-matric'];
@@ -97,6 +103,8 @@ if ($result = mysqli_query($conn,$usr)) {
                     
                         $active_session = mysqli_fetch_array($resullt);
 
+                        $_SESSION['active_sess'] = $active_session['session'];
+
                     //    echo $active_session['session'];
                        // while ( $row = mysqli_fetch_array($resullt)) {
                             
@@ -157,12 +165,15 @@ if ($result = mysqli_query($conn,$usr)) {
 
         var slotLeft = parseInt($.trim($('#slots').text()));
 
+        var msg = $.trim($('#leave-a-message').val());
+
 
         $.ajax({
             url: 'saveappointment.php',
             type: 'POST',
             data: { appointment_Day: appointment_Day,
-                    slotLeft:slotLeft
+                    slotLeft:slotLeft,
+                    msg: msg
                     
                     },
             success: function(response){

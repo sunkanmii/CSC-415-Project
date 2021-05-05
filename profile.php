@@ -38,6 +38,8 @@ if ($result = mysqli_query($conn,$usr)) {
     
   //  echo $profilepic;
 }
+
+
 ?>
 
 <!DOCTYPE html>
