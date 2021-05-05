@@ -74,19 +74,19 @@ if ($result = mysqli_query($conn,$usr)) {
                 </a>
             </div>
             <div class="page-link">
-                <a href="/">
+                <a href="./">
                     <img src="./imgs/mail.svg" alt="">
                     <p>Message</p>
                 </a>
             </div>
             <div class="page-link">
-                <a href="/">
+                <a href="./">
                     <img src="./imgs/admin.svg" alt="">
                     <p>Admin</p>
                 </a>
             </div>
             <div class="page-link">
-                <a href="/">
+                <a href="./logout">
                     <img src="./imgs/logout.svg" alt="">
                     <p>Logout</p>
                 </a>
