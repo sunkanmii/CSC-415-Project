@@ -2,10 +2,10 @@ main .main-page{
     display: flex;
     width: 100%;
     min-height: 19rem;
+    z-index: 1;
     position: absolute;
     top: 2rem;
     flex-wrap: wrap;
-    z-index: 1;
     padding: 1rem 4rem;
 }
 
