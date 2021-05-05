@@ -34,6 +34,8 @@ if ($result = mysqli_query($conn,$usr)) {
 
 //$dte = "";
 //$dte =  $_REQUEST['dte'];
+
+
 ?>
 
 <!DOCTYPE html>
@@ -135,7 +137,7 @@ if ($result = mysqli_query($conn,$usr)) {
             <textarea cols="5" rows="8" id="leave-a-message" placeholder="Leave a message..."
                 name="booking-message"></textarea>
 
-            <input type="submit" value="BOOK" />
+            <input type="submit" id="booked" value="BOOK" />
         </section>
 
     </main>
@@ -144,6 +146,38 @@ if ($result = mysqli_query($conn,$usr)) {
         <p>Coyright <span id="copy-year">2021</span> &copy; appointmentunilag.com All rights reserved.</p>
     </footer>
     <script src='./js/main.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+
+    $( "#booked" ).on( "click", function() {
+
+
+        var  appointment_Day = $.trim($('.dropbtn').text());
+
+        var slotLeft = parseInt($.trim($('#slots').text()));
+
+
+        $.ajax({
+            url: 'saveappointment.php',
+            type: 'POST',
+            data: { appointment_Day: appointment_Day,
+                    slotLeft:slotLeft
+                    
+                    },
+            success: function(response){
+                console.log(response);
+                // window.location = 'saveappointment.php';
+                window.location.href = 'index.php';
+                //$("#div").html(response);
+            }
+            });
+
+
+        });
+
+
+    </script>
 
  
 </body>
