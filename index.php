@@ -8,7 +8,6 @@ if(session_status() == PHP_SESSION_NONE){
 
 if ( !isset($_SESSION['user-matric'])) {
     header("Location: login.php");
-
 }
 
 include 'connect.php';
@@ -59,8 +58,8 @@ if ($result = mysqli_query($conn,$usr)) {
         <nav>
             <ul>
                 <li class="active"><a href="./">home</a></li>
-                <li><a href="./">profile</a></li>
-                <li><a href="./">logout</a></li>
+                <li><a href="./profile.php">profile</a></li>
+                <li><a href="./logout.php">logout</a></li>
                 <li><a href="./"><img src=<?php echo $profilepic ?> alt="profile"></a></li>
             </ul>
         </nav>

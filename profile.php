@@ -1,4 +1,4 @@
-<!-- <?php 
+<?php 
 
 
 if(session_status() == PHP_SESSION_NONE){
@@ -32,7 +32,7 @@ if ($result = mysqli_query($conn,$usr)) {
     
   //  echo $profilepic;
 }
-?> -->
+?>
 
 <!DOCTYPE html>
 <html lang="en-US">

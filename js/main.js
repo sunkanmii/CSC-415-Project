@@ -1,7 +1,8 @@
 
 const getSlotValue = document.querySelector("#slots");
 const getSlotSuffix = document.querySelector("#slots-suffix");
-const getAllElementsInDropDown = document.querySelectorAll(".dropdown-content a");
+const inputValueForDropDown = document.querySelector(".p415-bottom-section input[type='text']");
+const getAllElementsInDropDown = document.querySelectorAll(".dropdown-content span");
 const dropDownText = document.querySelector(".dropbtn");
 const caretDown = document.querySelector("fa fa-caret-down");
 
@@ -14,6 +15,7 @@ function displayDate(){
     for(let i = 0; i < getAllElementsInDropDown.length; i++){
         getAllElementsInDropDown[i].addEventListener('click', () => {
             dropDownText.innerHTML = getAllElementsInDropDown[i].textContent + "<i class='fa fa-caret-down'></i>"; 
+            inputValueForDropDown.setAttribute("value", getAllElementsInDropDown[i].textContent);
         })
     }
 }
