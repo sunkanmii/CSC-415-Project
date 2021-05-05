@@ -126,7 +126,7 @@ if ($result = mysqli_query($conn,$usr)) {
             </div>
             <div class="p415-slot-section">
                 <p>
-                    <span id="slots">2</span>
+                    <span id="slots">0</span>
                     <span id="slots-suffix">Slot left</span>
                 </p>
             </div>
