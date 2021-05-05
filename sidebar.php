@@ -86,7 +86,7 @@ if ($result = mysqli_query($conn,$usr)) {
                 </a>
             </div>
             <div class="page-link">
-                <a href="./logout">
+                <a href="./login.php">
                     <img src="./imgs/logout.svg" alt="">
                     <p>Logout</p>
                 </a>
