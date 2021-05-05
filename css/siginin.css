@@ -1,0 +1,203 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+main{
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: center;
+    min-height: 100vh;
+}
+a{
+    color: black;
+}
+.p415-login-container{
+    display: flex;
+    position: relative;
+    width: 95%;
+    min-height: 39rem;
+    align-items: center;
+    justify-content: center;
+}
+.p415-mail-section{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-left: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.p415-mail-section label{
+    position: absolute;
+    visibility: hidden;
+}
+.p415-mail-section input[type="email"], .p415-mail-section input[type="password"], .p415-mail-section input[type="text"], .p415-mail-section input[type="number"]{
+    padding: 1rem;
+    width: 91%;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.04), 0px 4px 16px rgba(51, 51, 51, 0.08);
+    margin-top: 1rem;
+}
+.p415-login-container .p415-login-card{
+    display: flex;
+    background-color: white;
+    width: 525px;
+    min-height: 29rem;
+    flex-wrap: wrap;
+    align-items: center;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.04), 0px 4px 16px rgba(51, 51, 51, 0.08);
+}
+.p415-login-container .p415-login-card h1{
+    width: 100%;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    padding-left: 2.4rem;
+}
+.p415-login-card nav{
+    width: 100%;
+    border-bottom: 1px solid #F1F1F1;
+    margin-top: 0.3rem;
+    margin-bottom: 3rem;
+}
+.p415-login-card nav ul{
+    display: flex;
+    width: 100%;
+    padding-left: 0.9rem;
+    align-items: center;
+    text-align: center;
+    height: 3rem;
+    margin-bottom: 0.2rem;
+}
+.p415-login-card nav ul li{
+    width: 7rem;
+    height: auto;
+}
+.p415-login-card nav ul li a{
+    padding: 1rem 0;
+}
+.p415-login-card nav ul li:nth-child(2) a{
+    font-weight: normal;
+    color: #6B6B6B;
+}
+.p415-login-card nav ul li a.active{
+    border-bottom: 2px solid #6E41E2;
+}
+.p415-link-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+}
+.p415-link-section .p415-link:first-child, .p415-link-section a{
+    color: white;
+    cursor: pointer;
+}
+.p415-link-section a{
+    color: #6E41E2;
+}
+.p415-link-section .active{
+    background-color: #6E41E2;
+    box-shadow: 0px 7px 9px #d3d3d3c4;
+}
+.p415-link-section {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+}
+.p415-link-section .p415-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    margin: 1rem 0;
+    border: none;
+    padding: 1rem 0;
+}
+.p415-login-card nav ul li a{
+    color: black;
+    font-weight: 400;
+    font-family: 'Roboto';
+}
+main img{
+    display: none;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+}
+main .p415-float-right{right: 0;}
+.p415-mail-section input[type="checkbox"]{
+    width: 10%;
+    height: 1rem;
+    cursor: pointer;
+}
+.p415-checkbox-section{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 2rem;
+}
+.p415-checkbox-section label span{
+    color: #6E41E2;
+}
+.p415-checkbox-section label{width: 85%;}
+#privacy-policy{
+    visibility: visible;
+    position: relative;
+}
+.alert-danger{
+    background-color: lightcoral;
+    border-radius: 4%;
+    font-style: normal;
+    font-size: 0.9rem;
+    margin-top: 2px;
+    text-align: center;
+    padding: 5px;
+    font-weight: normal;
+    display: block;
+    position: absolute;
+    top: 0px;
+    width: 35%;
+}
+.alert-success{
+    color: white;
+    background-color: #4BB453;
+    border-radius: 4%;
+    font-style: normal;
+    font-size: 0.9rem;
+    margin-top: 2px;
+    text-align: center;
+    padding: 5px;
+    font-weight: normal;
+    display: block;
+    position: unset;
+    top: 0px;
+    
+}
+/* label color for file upload */
+.drag-drop-section label span{
+    color: black;
+    font-size: 0.8rem;
+}
+
+/* Display messsage if file got uploaded */
+#p415-display-message{
+    display: none;
+    font-size: 0.9rem;
+}
+@media screen and (min-width: 40rem) {
+    main{
+        justify-content: unset;
+    }
+    main img{
+        width: 654px;
+        display: inline-block;
+    }
+    .p415-login-container{
+        width: 100%;
+    }
+}

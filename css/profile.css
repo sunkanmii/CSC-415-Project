@@ -1,0 +1,160 @@
+.p415-work-status-update-green, .p415-work-status-update-red, .p415-work-status-update-pink{
+    padding: 0.4rem 0.8rem;
+    border-radius: 10px;
+    color: #444444;
+    font-weight: bold;
+}
+.p415-work-status-update-green{
+    background-color: #10CD45;
+}
+.p415-work-status-update-red{
+    background-color: #DB0E0E;
+}
+.p415-work-status-update-pink{
+    background-color: #FFE3FE;;
+}
+.p415-profile-upperheader{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 2rem;
+}
+.p415-profile-upperheader p{
+    font-size: 2.2rem;
+}
+.p415-profile-upperheader p#p415-user-matric{
+    margin-left: 1rem;
+}
+hr{
+    width: 95%;
+    border: none;
+    background-color: #D2D2D2;
+    border: 1px solid #D2D2D2;
+}
+.p415-profile-mid-section{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.p415-profile-mid-section section{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0 4rem;
+}
+.p415-profile-mid-section .p415-profile-details{min-height: 12rem;display: grid;}
+.p415-profile-mid-section .p415-profile-details hr{
+    width: 100%;
+    height: 0;
+    margin-bottom: 1rem;
+}
+.p415-profile-mid-section .p415-profile-details > *{
+    width: 100%;
+}
+.p415-profile-mid-section .p415-profile-details img{
+    width: 80%;
+    text-align: center;
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: 10rem;
+    justify-self: center;
+}
+.p415-profile-mid-section .p415-profile-details h1{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.p415-profile-mid-section #p415-email{
+    text-decoration: underline;
+}
+.p415-profile-form-section{
+    position: relative;
+}
+.p415-profile-form-section form{
+    display: grid;
+    justify-content: center;
+    width: 100%;
+    grid-template-columns: 1fr;
+}
+label{
+    position: absolute;
+    visibility: hidden;
+}
+.p415-profile-form-section{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.p415-profile-form-section input[type="email"], .p415-profile-form-section input[type="text"]{
+    padding: 1rem;
+    width: 95%;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.04), 0px 4px 16px rgba(51, 51, 51, 0.08);
+    margin-bottom: 2rem;
+}
+.p415-profile-form-section input[type="submit"]{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 9rem;
+    border-radius: 14px;
+    margin: 1rem 0;
+    margin-right: 1.5rem;
+    cursor: pointer;
+    justify-self: end;
+    border: none;
+    padding: 1rem 0;
+    background-color: #6E41E2;
+    box-shadow: 0px 7px 9px #d3d3d3c4;
+    color: white;
+}
+.p415-profile-bottom-section{
+    background-color: #FFE3FE;
+    color: #878787;
+    width: 90%;
+    margin-top: 10rem;
+    display: flex;
+    justify-content: center;
+}
+.p415-profile-bottom-section table{
+    display: flex;
+    justify-content: center;
+    flex-wrap: inherit;
+    align-items: center;
+    width: 100%;
+    min-height: 19rem;
+    box-shadow: inset 0px -4px 10px -3px rgba(0, 0, 0, 0.25);
+    border-radius: 17px;
+}
+table, th, td {
+    border-bottom: 1px solid #D2D2D2;
+}
+table{
+    border-bottom: none;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    color: #878787;
+}
+.p415-profile-bottom-section table th, .p415-profile-bottom-section table td{
+    padding: 0.5rem;
+    padding-right: 3rem;
+    padding-top: 1.8rem;
+}
+.p415-profile-bottom-section table tbody{
+    width: auto;
+    overflow-x: scroll;
+}
+@media screen and (min-width: 40rem){
+    .p415-profile-mid-section .p415-profile-details img{
+        width: 324px;
+    }
+    .p415-profile-mid-section{
+        flex-wrap: nowrap;
+    }
+    .p415-profile-mid-section section{
+        width: 50%;
+    }
+}

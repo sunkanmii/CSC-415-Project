@@ -1,3 +1,19 @@
+<?php
+
+     if(session_status() == PHP_SESSION_NONE){
+         //session has not started
+         session_start();
+    }
+    
+     if ( !isset($_SESSION['user-matric'])) {
+         header("Location: login.php");
+    
+     } elseif ($_SESSION['user-matric'] !=160805007) {
+         header("Location: login.php");
+     }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en-US">
 
@@ -16,108 +32,60 @@
 
 <body>
     <main>
-        <section class="header-sidebar">
-            <input type="checkbox" id="toggle-butt" />
-
-            <label for="toggle-butt" class="toggle-menu">
-                <i class="fa fa-bars" aria-hidden="true"></i>
-            </label>
-
-            <section class="side-bar-section">
-                <div class="profile-image">
-                    <img src="./imgs/demo.png" alt="profile" />
-                    <hr />
-                </div>
-
-                <div class="links-to-pages">
-                    <div class="page-link">
-                        <a href="./index.html">
-                            <img src="./imgs/appointment.svg" alt="">
-                            <p>Appointments</p>
-                        </a>
-                    </div>
-                    <div class="page-link">
-                        <a href="./schedules.html">
-                            <img src="./imgs/schedules.svg" alt="">
-                            <p>Schedules</p>
-                        </a>
-                    </div>
-                    <div class="page-link">
-                        <a href="/">
-                            <img src="./imgs/sessions.svg" alt="">
-                            <p>Sessions</p>
-                        </a>
-                    </div>
-                    <div class="page-link">
-                        <a href="/">
-                            <img src="./imgs/mail.svg" alt="">
-                            <p>Message</p>
-                        </a>
-                    </div>
-                    <div class="page-link">
-                        <a href="/">
-                            <img src="./imgs/admin.svg" alt="">
-                            <p>Admin</p>
-                        </a>
-                    </div>
-                    <div class="page-link">
-                        <a href="/">
-                            <img src="./imgs/logout.svg" alt="">
-                            <p>Logout</p>
-                        </a>
-                    </div>
-                </div>
-            </section>
-        </section>
+        <?php
+            include "./sidebar.php";
+        ?>
         <section class="section-head">
             <div class="header">
                 <h1>Set Appointment Schedules</h1>
                 <div class="container-header">
                     <div class="container">
                         <div class="round-container">
-                            <h3><bold>Active</bold></h3>
+                            <h3>
+                                <bold>Active</bold>
+                            </h3>
                         </div>
-                        <h3>2020</h3>
+                        <h3>2020 1st</h3>
                         <h3>Session</h3>
                     </div>
+                </div>
+                <hr class="solid">
             </div>
-            <hr class="solid">
-            </div>
-        
-        </br>
-           <!-- form body -->
-           <div class="form-body">
-               <div class="horizontal-group">
-                   <div class="form-group left">
-                       <label class="label-title">Start Date</label>
-                        <input type="date" class="form-input"required="required" />
+
+            </br>
+            <!-- form body -->
+            <div class="form-body">
+                <div class="horizontal-group">
+                    <div class="form-group left">
+                        <label class="label-title">Start Date</label>
+                        <input type="date" class="form-input" required="required" />
                     </div>
                     <div class="form-group left">
                         <label class="label-title">End Date</label>
-                        <input type="date" class="form-input"/>
+                        <input type="date" class="form-input" />
                     </div>
                     <div class="form-group left">
                         <label class="label-title">Max stu/day</label>
-                        <input type="number" class="form-input"/>
+                        <input type="number" class="form-input" />
                     </div>
                 </div>
             </div>
-        </br>
+            </br>
             <div class="form-body">
                 <div class="horizontal-group">
                     <div class="form-group left">
                         <label class="label-title">Dow</label>
-                         <div >
+                        <div>
                             <select class="form-input" name="cars" id="cars">
                                 <option value="monday">Monday</option>
                                 <option value="tuesday">tuesday</option>
                                 <option value="wednesday">Wednesday</option>
                                 <option value="thursday">Thursday</option>
                                 <option value="friday">Friday</option>
-                              </select>
-                         </div>
-                     </div>
-                     <div class="form-group left">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group left">
                         <label class="label-title">Start Time</label>
                         <input type="time" class="form-input" placeholder="9/23/20" required="required" />
                     </div>
@@ -126,9 +94,9 @@
                         <input type="time" class="form-input" placeholder="4" />
                     </div>
                     <div><button>add</button></div>
-                 </div>
-             </div>
-             <!-- form end -->
+                </div>
+            </div>
+            <!-- form end -->
             <div class="table-section">
                 <table>
                     <tr>
@@ -140,9 +108,9 @@
                         <th>StartTime</th>
                         <th>EndTime</th>
                         <th>stu/day</th>
-                      </tr>
-                      <tr>
-                        <td>2020</td>
+                    </tr>
+                    <tr>
+                        <td>2020 1st semester</td>
                         <td>8/23/20</td>
                         <td>9/23/20</td>
                         <td>monday</td>
@@ -150,9 +118,9 @@
                         <td>5:30pm</td>
                         <td>7:30pm</td>
                         <td>delete</td>
-                      </tr>
-                      <tr>
-                        <td>2020</td>
+                    </tr>
+                    <tr>
+                        <td>2020 1st semester</td>
                         <td>7/20/20</td>
                         <td>8/21/20</td>
                         <td>friday</td>
@@ -160,9 +128,9 @@
                         <td>10:00am</td>
                         <td>11:00am</td>
                         <td>delete</td>
-                      </tr>
-                      <tr>
-                        <td>2020</td>
+                    </tr>
+                    <tr>
+                        <td>2020 1st semester</td>
                         <td>5/20/20</td>
                         <td>6/21/20</td>
                         <td>tuesday</td>
@@ -170,7 +138,7 @@
                         <td>10:00am</td>
                         <td>11:00am</td>
                         <td>delete</td>
-                      </tr>
+                    </tr>
                 </table>
         </section>
     </main>

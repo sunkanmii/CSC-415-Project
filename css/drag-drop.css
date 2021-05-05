@@ -1,0 +1,93 @@
+#drop-area {
+    box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.04), 0px 4px 16px rgba(51, 51, 51, 0.08);
+    width: 90%;
+    font-family: sans-serif;
+    padding: 20px;
+    margin: 1rem 0;
+    height: auto;
+}
+
+#drop-area.highlight {
+    border: 1px solid purple;
+}
+
+p {
+    margin-top: 0;
+    color: rgba(17, 17, 17, 0.48);
+}
+p span{
+    display: block;
+}
+span#small-text{
+    font-size: 0.65rem;
+    order: 3;
+}
+.my-form {
+    margin-bottom: 10px;
+}
+
+#gallery {
+    margin-top: 10px;
+}
+
+#gallery img {
+    width: 150px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px;
+    background: #ccc;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.button:hover {
+    background: #ddd;
+}
+.drag-drop-section{
+    display: flex;
+}
+.drag-drop-section label.button-for-file{
+    position: relative;
+    visibility: visible;
+    width: 40%;
+    text-align: end;
+    font-size: 0.8rem;
+    color: #6e41e2;
+    cursor: pointer;
+    padding-left: 2rem;
+}
+.spandrg {
+    font-size: 0.8rem;
+}
+#fileElem {
+    display: none;
+}
+
+.img_preview_container {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+   justify-content: center;
+}
+.img_preview_txt{
+    font-size: 8px;
+}
+
+.image_preview_img{
+    margin-left: 2px;
+    margin-right: 0px;
+    padding-right: 0px;
+    position: relative;
+    width: 90%;
+    height: 45px;
+    z-index: 1000;
+    align-items: center;
+    border-radius: 50%;
+}

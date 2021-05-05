@@ -1,11 +1,13 @@
+
+
 main .main-page{
     display: flex;
     width: 100%;
     min-height: 19rem;
+    z-index: 1;
     position: absolute;
     top: 2rem;
     flex-wrap: wrap;
-    z-index: 1;
     padding: 1rem 4rem;
 }
 
@@ -35,6 +37,7 @@ main .main-page{
 .main-page .appointment-header .create-new-row span img{
     width: 26px;
     height: 7.25px;
+    border-radius: 20rem;
 }
 .main-page .appointment-header .create-new-row button{
     background-color: #10CD45;
@@ -111,6 +114,12 @@ table{
 .p415-work-status-update-pink{
     background-color: #FFE3FE;;
 }   
+/* Disable scroll function for input number */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
 @media screen and (min-width: 60rem) {
     main .main-page{
         position: relative;
