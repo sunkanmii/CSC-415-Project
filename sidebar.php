@@ -73,20 +73,28 @@ if ($result = mysqli_query($conn,$usr)) {
                     <p>Sessions</p>
                 </a>
             </div>
+<<<<<<< HEAD
           <!--  <div class="page-link">
+=======
+            <!-- <div class="page-link">
+>>>>>>> 42a80c4679d4e91e1c29a6949535d5c3e554be58
                 <a href="./">
                     <img src="./imgs/mail.svg" alt="">
                     <p>Message</p>
                 </a>
             </div> -->
+<<<<<<< HEAD
             <div class="page-link">
+=======
+            <!-- <div class="page-link">
+>>>>>>> 42a80c4679d4e91e1c29a6949535d5c3e554be58
                 <a href="./">
                     <img src="./imgs/admin.svg" alt="">
                     <p>Admin</p>
                 </a>
-            </div>
+            </div> -->
             <div class="page-link">
-                <a href="./login.php">
+                <a href="./logout.php">
                     <img src="./imgs/logout.svg" alt="">
                     <p>Logout</p>
                 </a>
