@@ -58,7 +58,7 @@
 .side-bar-section .links-to-pages .page-link:nth-child(1){
     margin-top: 0;
 }
-.side-bar-section .links-to-pages .page-link:nth-child(6){
+.side-bar-section .links-to-pages .page-link:last-child{
     margin-top: 11rem;
     margin-bottom: 3rem;
 }
