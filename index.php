@@ -9,6 +9,9 @@ if(session_status() == PHP_SESSION_NONE){
 if ( !isset($_SESSION['user-matric'])) {
     header("Location: login.php");
 }
+elseif ($_SESSION['user-matric'] ==160805007) {
+    header("Location: dashboard.php");
+}
 
 if ( isset( $_SESSION['sucess_app'])) {
    echo $_SESSION['sucess_app'];
