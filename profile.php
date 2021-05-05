@@ -58,8 +58,8 @@ if ($result = mysqli_query($conn,$usr)) {
             <ul>
                 <li><a href="./">home</a></li>
                 <li class="active"><a href="./">profile</a></li>
-                <li><a href="./">logout</a></li>
-                <li><a href="./"><img src="/imgs/profile.png" alt="profile"></a></li>
+                <li><a href="./login.php">logout</a></li>
+                <li><a href="./"><img src=<?php echo $profilepic ?> alt="profile"></a></li>
             </ul>
         </nav>
         <section class="p415-profile-upperheader">
@@ -70,7 +70,7 @@ if ($result = mysqli_query($conn,$usr)) {
 
         <section class="p415-profile-mid-section">
             <section class="p415-profile-details">
-                <img src="./imgs/profile.png" alt="profile" />
+                <img src=<?php echo $profilepic ?> alt="profile" />
                 <hr>
                 <h1 id="p415-username">Natasha Laurel</h1>
                 <p id="p415-email">mathiasjr007@gmail.com</p>
