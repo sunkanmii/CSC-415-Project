@@ -32,33 +32,6 @@ if ($result = mysqli_query($conn,$usr)) {
   //  echo $profilepic;
 }
 
-$select_items = "";
-
-$query1 = "SELECT * FROM `dbnh41dWFL`.`session`
-            WHERE status= 'active' ";
-
-if ($resullt = mysqli_query($conn,$query1)) {
-
-    $active_session = mysqli_fetch_array($resullt);
-
-//    echo $active_session['session'];
-   // while ( $row = mysqli_fetch_array($resullt)) {
-        
-  //      echo $row['session'];
- //   }  
-
- $query2 = "SELECT * FROM `dbnh41dWFL`.`schedule`
- WHERE session= '".$active_session['session']."' ";
-
-if ($resullt2 = mysqli_query($conn,$query2)) {
-        while ( $row2 = mysqli_fetch_array($resullt2)) {       
-            
-            $select_items = $row2['available_DOW'].' '.date('F, Y', strtotime($row2['start_date'])).' '.date('h:ia', strtotime($row2['start_time'])).'-'.date('h:ia', strtotime($row2['end_time']));
-        }  
-    }
-
-}
-
 //$dte = "";
 //$dte =  $_REQUEST['dte'];
 ?>
@@ -104,15 +77,47 @@ if ($resullt2 = mysqli_query($conn,$query2)) {
             <img src="./imgs/home-background.png" alt="" />
         </section>
 
-        <form method="GET" class="p415-bottom-section">
-        <input type="text" disabled value="" name="selected-date">
-            <div type="text" class="dropdown">
-                <span class="dropbtn" onclick="showDropDown()"> Available Dates
+        <section class="p415-bottom-section">
+            <div class="dropdown">
+                <button class="dropbtn" onclick="showDropDown()"> Available Dates
                     <i class="fa fa-caret-down"></i>
-                </span>
+                </button>
                 <div class="dropdown-content" id="myDropdown">
-                      <?php echo '<span>'.$select_items.'</span>';
-                      ?>
+                    <?php 
+
+                    $select_items = "";
+                    
+                    $query1 = "SELECT * FROM `dbnh41dWFL`.`session`
+                                WHERE status= 'active' ";
+
+                    if ($resullt = mysqli_query($conn,$query1)) {
+                    
+                        $active_session = mysqli_fetch_array($resullt);
+
+                    //    echo $active_session['session'];
+                       // while ( $row = mysqli_fetch_array($resullt)) {
+                            
+                      //      echo $row['session'];
+                     //   }  
+
+                     $query2 = "SELECT * FROM `dbnh41dWFL`.`schedule`
+                     WHERE session= '".$active_session['session']."' ";
+                    
+                    if ($resullt2 = mysqli_query($conn,$query2)) {
+
+                            while ( $row2 = mysqli_fetch_array($resullt2)) {       
+                                $select_items = $row2['available_DOW'].' '.date('F, Y', strtotime($row2['start_date'])).' '.date('h:ia', strtotime($row2['start_time'])).'-'.date('h:ia', strtotime($row2['end_time']));
+                                echo   '<a href="#selected_time">'.$select_items.'</a>' ;
+                            }  
+                            
+                
+                        }
+
+                    }
+
+                    
+                    ?>
+
                 </div>
             </div>
             <div class="p415-slot-section">
@@ -125,10 +130,11 @@ if ($resullt2 = mysqli_query($conn,$query2)) {
             <time id="selected_time" datetime="2021-03-22T17:30">Monday. 22nd March 2021 5:30pm</time>
 
             <label for="leave-a-message">Leave a message</label>
-            <textarea cols="5" rows="8" id="leave-a-message" placeholder="Leave a message..." name="booking-message"></textarea>
+            <textarea cols="5" rows="8" id="leave-a-message" placeholder="Leave a message..."
+                name="booking-message"></textarea>
 
             <input type="submit" value="BOOK" />
-        </form>
+        </section>
 
     </main>
 
