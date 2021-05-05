@@ -74,7 +74,7 @@ if ($result = mysqli_query($conn,$usr)) {
 
         <section class="p415-mid-section">
             <p>Book An Appointment for Supervision Today!</p>
-            <img src="./imgs/home-background.png" alt="" />
+            <img src="./imgs/home-background.png" alt=""  />
         </section>
 
         <section class="p415-bottom-section">
@@ -86,6 +86,7 @@ if ($result = mysqli_query($conn,$usr)) {
                     <?php 
 
                     $select_items = "";
+                    $slot_left = 0;
                     
                     $query1 = "SELECT * FROM `dbnh41dWFL`.`session`
                                 WHERE status= 'active' ";
@@ -107,7 +108,8 @@ if ($result = mysqli_query($conn,$usr)) {
 
                             while ( $row2 = mysqli_fetch_array($resullt2)) {       
                                 $select_items = $row2['available_DOW'].' '.date('F, Y', strtotime($row2['start_date'])).' '.date('h:ia', strtotime($row2['start_time'])).'-'.date('h:ia', strtotime($row2['end_time']));
-                                echo   '<a href="#selected_time">'.$select_items.'</a>' ;
+                                $slot_left = $row2['slot_left'];
+                                echo   '<a href="#selected_time" data-value='.$slot_left.'>'.$select_items.'</a>' ;
                             }  
                             
                 

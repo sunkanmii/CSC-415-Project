@@ -4,6 +4,8 @@ const getSlotSuffix = document.querySelector("#slots-suffix");
 const getAllElementsInDropDown = document.querySelectorAll(".dropdown-content a");
 const dropDownText = document.querySelector(".dropbtn");
 const caretDown = document.querySelector("fa fa-caret-down");
+const selected_time = document.querySelector("#selected_time");
+const slots = document.querySelector("#slots");
 
 // Dropdown for home page.
 function showDropDown() {
@@ -13,7 +15,9 @@ function showDropDown() {
 function displayDate(){
     for(let i = 0; i < getAllElementsInDropDown.length; i++){
         getAllElementsInDropDown[i].addEventListener('click', () => {
-            dropDownText.innerHTML = getAllElementsInDropDown[i].textContent + "<i class='fa fa-caret-down'></i>"; 
+            dropDownText.innerHTML = getAllElementsInDropDown[i].textContent + "<i class='fa fa-caret-down'></i>";
+            selected_time.innerHTML =  getAllElementsInDropDown[i].textContent;
+            slots.innerHTML = getAllElementsInDropDown[i].getAttribute('data-value');
         })
     }
 }
